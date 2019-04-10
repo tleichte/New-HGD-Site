@@ -1,0 +1,33 @@
+/* 
+Theme Name: HGD Theme
+Author: Tyler Eichten
+Version: 0.0.1
+*/
+
+@charset "UTF-8";
+
+/* Reset */
+@import "reset";
+
+/* Normalize */
+@import "normalize";
+
+
+@import "color";
+
+@import "mixin";
+
+
+/* Medium Styles */
+@import "medium";
+
+
+
+@import url('https://use.typekit.net/dvm7hsc.css');
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:300,400,700');
+
+/* Small/Default Styles */
+@media screen and (max-width: 771px)
+{
+    @import "small";
+}

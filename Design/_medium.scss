@@ -1,0 +1,324 @@
+$top-height: 100px;
+
+$max-font-size: 70px;
+
+$content-wrapping-width: 1450px;
+
+
+@mixin headersize($t) {
+    font-size: $max-font-size * $t;
+}
+
+
+@mixin full-fixed {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+}
+
+@mixin home-desicription {
+    font-size: 40px;
+    font-family: "Work Sans", sans-serif;
+    margin-top: 40px;
+    font-weight: 300;
+    color: rgb(50,50,50);
+}
+
+
+body {
+    background-color: white;
+    font-size: 110%;
+    font-family: 'Work Sans', sans-serif;
+}
+
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: bold;
+    //color: #202344;
+}
+
+h1 {
+    @include headersize(1);
+}
+h2 {
+    @include headersize(0.85);
+}
+h3 {
+    @include headersize(0.73);
+    //font-size: headersize(0.5);
+}
+h4 {
+    @include headersize(0.6);
+    //font-size: headersize(0.3);
+}
+h5 {
+    @include headersize(0.5);
+}
+h6 {
+    @include headersize(0.4);
+}
+
+
+button {
+    background-color: white;
+    border: 3px solid black;
+    padding: 15px 30px;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 300;
+    font-size: 30px;
+
+    transition: all 0.3s;
+
+    &:hover {
+        background-color: rgb(220,220,220);
+        transform: scale(1.05);
+    }
+
+    &:active {
+        transition: all 0.05s;
+        transform: scale(1);
+    }
+    
+}
+
+
+
+.main-content-wrapper {
+    max-width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+    width: $content-wrapping-width;
+    box-sizing: border-box;
+    margin: auto;
+}
+
+
+header {
+    height: $top-height;
+    max-height: 20%;
+    position: fixed;
+    background-color: black;
+    left: 0;
+    top: 0;
+    width: 100%;
+    
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        height: 100%;
+        .header-logo-container {
+            height: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            .header-logo {
+                height: 100%;
+                width: auto;
+            }
+        }
+    
+        .header-nav {
+            background-color: white;
+            width: 500px;
+            height: 100%;
+        }
+    }
+   
+
+
+    z-index: 99999;
+
+}
+
+.home-video-container {
+    @include full-fixed();
+    //padding-top: $top-width;
+    z-index: -999;
+    box-sizing: content-box;
+    #home-video {
+        min-height: 100%;
+        min-width: 100%;
+    }
+}
+
+.home-video-jumbotron {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    .home-video-jumbotron-logo {
+        box-sizing: content-box;
+        padding: 0 30px;
+        margin-bottom: 10px;
+    }
+    img {
+        width: 900px;
+        max-width: 100%; 
+        max-height: 30vh;
+    }
+    span {
+        font-size: 30px;
+        font-family: "Work Sans", sans-serif;
+        font-weight: 300;
+        
+        a {
+            text-decoration: underline;
+            position: relative;
+            z-index: 1
+        }
+    }
+
+    //position: fixed;
+    z-index: 0;
+}
+
+.home-video-down {
+    @include full-fixed();
+    z-index: -1;
+
+    background: radial-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7));
+
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    padding-bottom: 30px;
+
+    font-size: 50px;
+    font-weight: 300;
+    
+}
+
+.home-mission {
+    padding-top: 150px;
+    padding-bottom: 150px;
+    display: flex;
+    justify-content: flex-start;
+
+    .home-mission-description {
+        margin-left: 50px;
+
+        .home-mission-description-mission {
+            @include home-desicription();
+        }
+    }
+}
+
+.home-about {
+
+    .home-about-container {
+        padding-top: 150px;
+        padding-bottom: 150px;
+
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: row-reverse;
+        text-align: right;
+
+        .home-about-description {
+            margin-right: 50px;
+            .home-about-description-text {
+                @include home-desicription();
+            }
+        }
+
+        .home-about-description-button {
+            margin-top: 30px;
+        }
+    }
+
+
+
+    .home-about-bg-image {
+        height: 700px;
+
+        background-attachment: fixed;
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        box-shadow: inset 0 0 20px black;
+    }
+}
+
+
+.home-method {
+    text-align: center;
+    h1 {
+        //text-align: center;
+    }
+
+    .home-method-description {
+        @include home-desicription();
+        margin-bottom: 50px;
+    }
+
+    .home-method-image {
+        width: 100%;
+        height: 600px;
+    }
+}
+
+.home-alumni {
+    padding-top: 150px;
+    padding-bottom: 150px;
+
+    h1 {
+        text-align: center;
+    }
+
+    .home-alumni-container {
+        margin-top: 50px;
+        display: flex;
+        justify-content: flex-start;
+        justify-content: center;
+
+        .home-alumni-post {
+
+            &:first-child {
+                margin-left: 0px;
+            }
+
+            display: flex;
+            align-items: center;
+
+            height: 200px;
+            width: 400px;
+            margin:0 30px;
+            overflow: hidden;
+            border: solid 5px black;
+            box-shadow: 5px 5px 5px rgb(150,150,150);
+            border-radius: 150px;
+            position: relative;
+            background-color: black;
+            img {
+                width: 100%;
+                height: auto;
+            }
+            .home-alumni-post-name {
+                position: absolute;
+                padding-bottom: 15px;
+                padding-top: 10px;
+                bottom: 0;
+                font-family: pt-sans-narrow, sans-serif;
+                font-size: 30px;
+                font-weight: bold;
+                color: white;
+                width: 100%;
+                text-align: center;
+                background-color: rgba(0,0,0,0.5)
+            }
+        }
+    }
+}
+
+
