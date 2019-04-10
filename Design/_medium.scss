@@ -281,19 +281,34 @@ header {
         display: flex;
         justify-content: flex-start;
         justify-content: center;
+        flex-wrap: wrap;
+
+        justify-content: space-between;
 
         .home-alumni-post {
 
-            &:first-child {
-                margin-left: 0px;
-            }
+            // &:nth-child(3n) {
+            //     margin-right: 0px;
+            // }
 
             display: flex;
             align-items: center;
 
-            height: 200px;
+            box-sizing: border-box;
+
+            // $row-num: 3;
+            // $margin-h: 30px;
+            // $width: (($content-wrapping-width - ($row-num - 1)*$margin-h)/$row-num) - 5px; 
+
+            // width: $width;
+            // height: $width * 0.5;
+            // margin-right: $margin-h;
+
             width: 400px;
-            margin:0 30px;
+            height: 200px;
+            //margin-right: 30px;
+
+            
             overflow: hidden;
             border: solid 5px black;
             box-shadow: 5px 5px 5px rgb(150,150,150);
@@ -320,5 +335,3 @@ header {
         }
     }
 }
-
-
