@@ -524,7 +524,6 @@ button:active {
 
 header {
   height: 100px;
-  max-height: 20%;
   position: fixed;
   background-color: black;
   left: 0;
@@ -548,9 +547,26 @@ header .header .header-logo-container .header-logo {
   width: auto;
 }
 header .header .header-nav {
-  background-color: white;
-  width: 500px;
+  color: white;
+  font-weight: 300;
   height: 100%;
+  display: flex;
+  align-items: center;
+}
+header .header .header-nav ul li {
+  padding: 15px 10px;
+  margin-left: 30px;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 30px;
+  transition: all 0.3s;
+}
+header .header .header-nav ul li:first-child {
+  margin-left: 0;
+}
+header .header .header-nav ul li:hover {
+  transform: scale(1.05);
+  background-color: #323232;
 }
 
 .home-video-container {
@@ -602,6 +618,10 @@ header .header .header-nav {
   bottom: 30px;
   font-size: 50px;
   font-weight: 300;
+  transition: all 0.3s;
+}
+.home-video-jumbotron .home-video-jumbotron-downarrow:hover {
+  transform: scale(1.2);
 }
 
 .home-mission {
@@ -725,6 +745,23 @@ footer {
   background-color: black;
   height: 300px;
   color: white;
+}
+footer .footer-return-to-top {
+  background-color: white;
+  color: black;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  font-size: 20px;
+  text-align: center;
+  font-weight: 300;
+}
+footer .footer-return-to-top .footer-arrow {
+  display: inline-block;
+  transition: all 0.3s;
+}
+footer .footer-return-to-top .footer-arrow:hover {
+  transform: scale(1.05);
 }
 
 /* Small/Default Styles */
