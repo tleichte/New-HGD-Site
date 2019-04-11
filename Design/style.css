@@ -456,14 +456,19 @@ th {
 }
 
 /* Medium Styles */
+.scroll-header-offset {
+  position: absolute;
+  top: -100px;
+}
+
 body {
   background-color: white;
   font-size: 110%;
   font-family: 'Work Sans', sans-serif;
+  scroll-behavior: smooth;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Work Sans', sans-serif;
   font-weight: bold;
 }
 
@@ -495,7 +500,6 @@ button {
   background-color: white;
   border: 3px solid black;
   padding: 15px 30px;
-  font-family: 'Work Sans', sans-serif;
   font-weight: 300;
   font-size: 30px;
   transition: all 0.3s;
@@ -570,6 +574,7 @@ header .header .header-nav {
   flex-direction: column;
   align-items: center;
   color: white;
+  background: radial-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7));
   z-index: 0;
 }
 .home-video-jumbotron .home-video-jumbotron-logo {
@@ -584,28 +589,17 @@ header .header .header-nav {
 }
 .home-video-jumbotron span {
   font-size: 30px;
-  font-family: "Work Sans", sans-serif;
+  font-family: pt-sans-narrow, sans-serif;
   font-weight: 300;
 }
 .home-video-jumbotron span a {
   text-decoration: underline;
   position: relative;
-  z-index: 1;
+  pointer-events: all;
 }
-
-.home-video-down {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  height: 100%;
-  width: 100%;
-  z-index: -1;
-  background: radial-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7));
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  padding-bottom: 30px;
+.home-video-jumbotron .home-video-jumbotron-downarrow {
+  position: absolute;
+  bottom: 30px;
   font-size: 50px;
   font-weight: 300;
 }
@@ -615,16 +609,19 @@ header .header .header-nav {
   padding-bottom: 150px;
   display: flex;
   justify-content: flex-start;
+  position: relative;
 }
 .home-mission .home-mission-description {
   margin-left: 50px;
 }
 .home-mission .home-mission-description .home-mission-description-mission {
   font-size: 40px;
-  font-family: "Work Sans", sans-serif;
   margin-top: 40px;
   font-weight: 300;
   color: #323232;
+}
+.home-mission .home-mission-description .home-mission-description-button {
+  margin-top: 30px;
 }
 
 .home-about .home-about-container {
@@ -640,7 +637,6 @@ header .header .header-nav {
 }
 .home-about .home-about-container .home-about-description .home-about-description-text {
   font-size: 40px;
-  font-family: "Work Sans", sans-serif;
   margin-top: 40px;
   font-weight: 300;
   color: #323232;
@@ -662,7 +658,6 @@ header .header .header-nav {
 }
 .home-method .home-method-description {
   font-size: 40px;
-  font-family: "Work Sans", sans-serif;
   margin-top: 40px;
   font-weight: 300;
   color: #323232;
@@ -686,14 +681,17 @@ header .header .header-nav {
   justify-content: flex-start;
   justify-content: center;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .home-alumni .home-alumni-container .home-alumni-post {
+  transition: all 0.3s;
   display: flex;
   align-items: center;
   box-sizing: border-box;
   width: 400px;
-  height: 200px;
+  height: 215px;
+  margin: 0 15px;
+  margin-bottom: 30px;
   overflow: hidden;
   border: solid 5px black;
   box-shadow: 5px 5px 5px #969696;
@@ -701,11 +699,15 @@ header .header .header-nav {
   position: relative;
   background-color: black;
 }
+.home-alumni .home-alumni-container .home-alumni-post:hover {
+  transform: scale(1.05);
+}
 .home-alumni .home-alumni-container .home-alumni-post img {
   width: 100%;
   height: auto;
 }
 .home-alumni .home-alumni-container .home-alumni-post .home-alumni-post-name {
+  pointer-events: none;
   position: absolute;
   padding-bottom: 15px;
   padding-top: 10px;
@@ -717,6 +719,12 @@ header .header .header-nav {
   width: 100%;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.5);
+}
+
+footer {
+  background-color: black;
+  height: 300px;
+  color: white;
 }
 
 /* Small/Default Styles */
