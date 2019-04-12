@@ -567,6 +567,91 @@ header .header .header-nav ul li a:hover {
   background-color: #1e1e1e;
 }
 
+.header-offset {
+  height: 100px;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  overflow: auto;
+}
+footer .footer-return-to-top {
+  background-color: white;
+  color: black;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  font-size: 20px;
+  text-align: center;
+  font-weight: 300;
+}
+footer .footer-return-to-top .footer-arrow {
+  display: inline-block;
+  transition: all 0.3s;
+}
+footer .footer-return-to-top .footer-arrow:hover {
+  transform: scale(1.05);
+}
+footer .footer-return-to-top .footer-arrow span {
+  font-size: 40px;
+}
+footer .footer-nav {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+}
+footer .footer-nav ul {
+  padding: 0;
+}
+footer .footer-nav ul li {
+  display: inline-block;
+  font-weight: 300;
+  margin: 0 15px;
+}
+footer .footer-social {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+footer .footer-social img {
+  height: 75px;
+  width: 75px;
+  margin: 0 25px;
+  transition: all 0.3s;
+}
+footer .footer-social img:hover {
+  transform: scale(1.1);
+}
+footer .footer-copyright {
+  text-align: center;
+  margin: 30px 0;
+  font-weight: 300;
+}
+footer .footer-mtu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+footer .footer-mtu img {
+  height: 50px;
+}
+footer .footer-mtu .footer-mtu-eoe {
+  display: flex;
+  align-items: center;
+  border-left: solid 3px white;
+  height: 50px;
+  padding-left: 15px;
+  margin-left: 30px;
+  font-size: 15px;
+}
+
 .home-video-container {
   position: fixed;
   right: 0;
@@ -737,87 +822,6 @@ header .header .header-nav ul li a:hover {
   width: 100%;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.5);
-}
-
-footer {
-  background-color: black;
-  color: white;
-  overflow: auto;
-}
-footer .footer-return-to-top {
-  background-color: white;
-  color: black;
-  display: flex;
-  justify-content: center;
-  padding: 10px;
-  font-size: 20px;
-  text-align: center;
-  font-weight: 300;
-}
-footer .footer-return-to-top .footer-arrow {
-  display: inline-block;
-  transition: all 0.3s;
-}
-footer .footer-return-to-top .footer-arrow:hover {
-  transform: scale(1.05);
-}
-footer .footer-return-to-top .footer-arrow span {
-  font-size: 40px;
-}
-footer .footer-nav {
-  margin-top: 30px;
-  margin-bottom: 30px;
-  display: flex;
-  justify-content: center;
-  font-size: 30px;
-}
-footer .footer-nav ul {
-  padding: 0;
-}
-footer .footer-nav ul li {
-  display: inline-block;
-  font-weight: 300;
-  margin: 0 15px;
-}
-footer .footer-social {
-  margin-top: 30px;
-  margin-bottom: 30px;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-footer .footer-social img {
-  height: 75px;
-  width: 75px;
-  margin: 0 25px;
-  transition: all 0.3s;
-}
-footer .footer-social img:hover {
-  transform: scale(1.1);
-}
-footer .footer-copyright {
-  text-align: center;
-  margin: 30px 0;
-  font-weight: 300;
-}
-footer .footer-mtu {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-footer .footer-mtu img {
-  height: 50px;
-}
-footer .footer-mtu .footer-mtu-eoe {
-  display: flex;
-  align-items: center;
-  border-left: solid 3px white;
-  height: 50px;
-  padding-left: 15px;
-  margin-left: 30px;
-  font-size: 15px;
 }
 
 /* Small/Default Styles */

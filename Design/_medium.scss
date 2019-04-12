@@ -101,6 +101,8 @@ button {
 }
 
 
+// HEADER STYLES
+
 header {
     height: $top-height;
     //max-height: 20%;
@@ -156,6 +158,120 @@ header {
     z-index: 99999;
 
 }
+
+.header-offset {
+    height: $top-height;
+}
+
+
+// FOOTER STYLES
+
+footer {
+    background-color: black;
+    //height: 300px;
+    color: white;
+
+    overflow: auto;
+
+    .footer-return-to-top {
+        background-color: white;
+        color: black;
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+
+        font-size: 20px;
+        text-align: center;
+        font-weight: 300;
+        
+        .footer-arrow {
+            display: inline-block;
+            transition: all 0.3s;
+            &:hover {
+                transform: scale(1.05);
+            }
+            span {
+                font-size: 40px;
+            }
+        }
+    }
+    
+    .footer-nav {
+
+        margin-top: 30px;
+
+        margin-bottom: 30px;
+
+        display: flex;
+        justify-content: center;
+        font-size: 30px;
+        ul {
+            padding: 0;
+            li {
+                display: inline-block;
+                font-weight: 300;
+                margin: 0 15px;
+            }
+        }
+    }
+
+    .footer-social {
+
+        margin-top: 30px;
+        margin-bottom: 30px;
+
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        img {
+            height: 75px;
+            width: 75px;
+            margin: 0 25px;
+            transition: all 0.3s;
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    .footer-copyright {
+        text-align: center;
+        margin: 30px 0;
+        font-weight: 300;
+        // display: flex;
+        // justify-content: center;
+    }
+
+    .footer-mtu {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        img {
+            height: 50px;
+        }
+        .footer-mtu-eoe {
+            display: flex;
+            align-items: center;
+            border-left: solid 3px white;
+            height: 50px;
+            padding-left: 15px;
+            margin-left: 30px;
+            font-size: 15px;
+        }
+    }
+
+
+}
+
+
+
+
+
+
+// HOMEPAGE STYLES
 
 .home-video-container {
     @include full-fixed();
@@ -359,103 +475,3 @@ header {
 
 
 
-
-footer {
-    background-color: black;
-    //height: 300px;
-    color: white;
-
-    overflow: auto;
-
-    .footer-return-to-top {
-        background-color: white;
-        color: black;
-        display: flex;
-        justify-content: center;
-        padding: 10px;
-
-        font-size: 20px;
-        text-align: center;
-        font-weight: 300;
-        
-        .footer-arrow {
-            display: inline-block;
-            transition: all 0.3s;
-            &:hover {
-                transform: scale(1.05);
-            }
-            span {
-                font-size: 40px;
-            }
-        }
-    }
-    
-    .footer-nav {
-
-        margin-top: 30px;
-
-        margin-bottom: 30px;
-
-        display: flex;
-        justify-content: center;
-        font-size: 30px;
-        ul {
-            padding: 0;
-            li {
-                display: inline-block;
-                font-weight: 300;
-                margin: 0 15px;
-            }
-        }
-    }
-
-    .footer-social {
-
-        margin-top: 30px;
-        margin-bottom: 30px;
-
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-
-        img {
-            height: 75px;
-            width: 75px;
-            margin: 0 25px;
-            transition: all 0.3s;
-            &:hover {
-                transform: scale(1.1);
-            }
-        }
-    }
-
-    .footer-copyright {
-        text-align: center;
-        margin: 30px 0;
-        font-weight: 300;
-        // display: flex;
-        // justify-content: center;
-    }
-
-    .footer-mtu {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        margin-top: 30px;
-        margin-bottom: 30px;
-        img {
-            height: 50px;
-        }
-        .footer-mtu-eoe {
-            display: flex;
-            align-items: center;
-            border-left: solid 3px white;
-            height: 50px;
-            padding-left: 15px;
-            margin-left: 30px;
-            font-size: 15px;
-        }
-    }
-
-
-}
