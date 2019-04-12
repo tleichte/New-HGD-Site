@@ -522,6 +522,11 @@ button:active {
   margin: auto;
 }
 
+.main-content-spaced {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
 header {
   height: 100px;
   position: fixed;
@@ -822,6 +827,31 @@ footer .footer-mtu .footer-mtu-eoe {
   width: 100%;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.5);
+}
+
+.games-outer-container {
+  display: flex;
+}
+.games-outer-container .games-years .games-year {
+  padding: 10px 20px;
+}
+.games-outer-container .games-years .games-year-selected {
+  background-color: black;
+  color: white;
+}
+.games-outer-container .games-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.games-outer-container .games-container .games-game {
+  width: 150px;
+  margin-right: 30px;
+}
+.games-outer-container .games-container .games-game img {
+  width: 100%;
+}
+.games-outer-container .games-container .games-game span {
+  font-size: 13px;
 }
 
 /* Small/Default Styles */
