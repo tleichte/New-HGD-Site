@@ -38,6 +38,7 @@ body {
     font-size: 110%;
     font-family: 'Work Sans', sans-serif;
     scroll-behavior: smooth;
+    //overflow: visible;
 }
 
 
@@ -75,7 +76,7 @@ button {
     font-weight: 300;
     font-size: 30px;
 
-    transition: all 0.3s;
+    transition: transform 0.3s;
 
     &:hover {
         background-color: rgb(220,220,220);
@@ -83,7 +84,6 @@ button {
     }
 
     &:active {
-        transition: all 0.05s;
         transform: scale(1);
     }
     
@@ -143,12 +143,11 @@ header {
             ul {
                 li {
                     display: inline-block;
-                    transition: all 0.3s;
                     a {
                         padding: 10px 20px;
                         text-transform: uppercase;
                         font-size: 20px;
-                        transition: all 0.3s;
+                        transition: background-color 0.3s;
                         &:hover {
                             background-color: rgb(30,30,30);
                         }
@@ -173,7 +172,7 @@ header {
 
 footer {
     background-color: black;
-    //height: 300px;
+    box-shadow: 0 50vh 0 50vh black;
     color: white;
 
     overflow: auto;
@@ -191,7 +190,7 @@ footer {
         
         .footer-arrow {
             display: inline-block;
-            transition: all 0.3s;
+            transition: transform 0.3s;
             &:hover {
                 transform: scale(1.05);
             }
@@ -233,7 +232,7 @@ footer {
             height: 75px;
             width: 75px;
             margin: 0 25px;
-            transition: all 0.3s;
+            transition: transform 0.3s;
             &:hover {
                 transform: scale(1.1);
             }
@@ -248,24 +247,32 @@ footer {
         // justify-content: center;
     }
 
-    .footer-mtu {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        margin-top: 30px;
-        margin-bottom: 30px;
-        img {
-            height: 50px;
-        }
-        .footer-mtu-eoe {
+    .footer-mtu-background {
+        background-color: rgb(30,30,30);
+        overflow: auto;
+        .footer-mtu {
             display: flex;
+            flex-direction: row;
             align-items: center;
-            border-left: solid 3px white;
-            height: 50px;
-            padding-left: 15px;
-            margin-left: 30px;
-            font-size: 15px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            
+            img {
+                height: 50px;
+            }
+            .footer-mtu-eoe {
+                display: flex;
+                align-items: center;
+                border-left: solid 3px white;
+                height: 50px;
+                padding-left: 15px;
+                margin-left: 30px;
+                font-size: 15px;
+            }
         }
+
+
+
     }
 
 
@@ -327,7 +334,7 @@ footer {
         bottom: 30px;
         font-size: 50px;
         font-weight: 300;
-        transition: all 0.3s;
+        transition: transform 0.3s;
         &:hover {
             transform: scale(1.2);   
         }
@@ -429,7 +436,7 @@ footer {
 
         .home-alumni-post {
 
-            transition: all 0.3s;
+            transition: transform 0.3s;
 
             &:hover {
                 transform: scale(1.05);
@@ -488,36 +495,97 @@ footer {
 
 .games-outer-container {
     display: flex;
+    margin-top: 50px;
 
     .games-years {
         .games-year {
-            padding: 10px 20px;
+            font-size: 25px;
+            padding: 15px 30px;
+
+            transition: background-color 0.3s;
+            &:hover {
+                cursor: pointer;
+                background-color: rgb(220,220,220);
+            }
         }
         .games-year-selected {
             background-color: black;
             color: white;
+            &:hover {
+                background-color: black;
+            }
         }
     }
 
-        .games-container {
-            display: flex;
-            flex-wrap: wrap;
-            .games-game {
-                width: 150px;
-                margin-right: 30px;
+    #games-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-left: 50px;
+        flex-grow: 1;
+        .games-game {
+            width: 515px;
+            margin-right: 30px;
+            margin-bottom: 30px;
+            padding: 15px;
+            padding-top: 0px;
+            background-color: rgb(240,240,240);
+
+            //position: relative;
+
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+            transform-origin: bottom right;
+            box-shadow: 3px 3px 3px rgb(180,180,180);
+            //border-radius: 30px;
+            &:hover {
+                transform: scale(1.03);// translate(-5px, -5px);
+                box-shadow: 7px 7px 7px rgb(180,180,180);
+            }
+
+
+            .games-game-image {
+                display: flex;
+                justify-content: center;
+                overflow: hidden;
+                height: 160px;
+                margin-left: -15px;
+                margin-right: -15px;
+                background-color: black;
                 img {
-                    width: 100%;
-
-
-
+                    height: 100%;
                 }
-                span {
-                    font-size: 13px;
-                }
+                
+            }
+            .games-game-title {
+                margin-top: 10px;
+                margin-bottom: 10px;
+                //margin-bottom: 10px;
+                font-size: 25px;
+                text-align: center;
+                font-weight: bold;
+            }
+            .games-game-team {
+                // position: absolute;
+                // bottom: 30px;
+                // right: 30px;
+                margin-top: 8px;
+                font-size: 20px;
+                color: rgb(70,70,70);
+                //font-family: pt-sans-narrow, sans
+                //font-weight: 300;
+                text-align: center;
             }
         }
+    }
 
-
+    .games-container-loading {
+        justify-content: center;
+        img {
+            max-height: 100px;
+            max-width: 100px;
+        }
+    }
 
 
 }

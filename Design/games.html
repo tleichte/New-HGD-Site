@@ -63,15 +63,12 @@
 
     <div class="games-outer-container">
       <div class="games-years">
-        <div class="games-year games-year-selected">2018-2019</div>
-        <div class="games-year">2017-2018</div>
-        <div class="games-year">2016-2017</div>
+        <div class="games-year games-year-selected" year=2018>2018-2019</div>
+        <div class="games-year" year=2017>2017-2018</div>
+        <div class="games-year" year=2016>2016-2017</div>
       </div>
-      <div class="games-container">
-        <div class="games-game">
-          <img>
-          <span></span>
-        </div>
+      <div id="games-container" class="games-container-loading">
+
       </div>
     </div>
 
@@ -85,19 +82,53 @@
 
 
 
+<template id="loading">
+  <img src="images/loading.gif">
+</template>
+
+
+<template id="games-2018">
+    <div class="games-game">
+      <div class="games-game-image"><img src="images/games/Retravengence.PNG"></div>
+      <p class="games-game-title">Retravengence</p>
+      <p class="games-game-team">Team 1</p>
+    </div>
+    <div class="games-game">
+      <div class="games-game-image"><img src="images/games/OrbitCommander.png"></div>
+      <p class="games-game-title">Orbit Commander</p>
+      <p class="games-game-team">Team 2</p>
+    </div>
+    <div class="games-game">
+      <div class="games-game-image"><img src="images/games/TempleOfTheSun.png"></div>
+      <p class="games-game-title">Temple of the Sun</p>
+      <p class="games-game-team">Team 3</p>
+    </div>
+    <div class="games-game">
+      <div class="games-game-image"><img src="images/games/StrandedAtStation4.png"></div>
+      <p class="games-game-title">Stranded @ Station 4</p>
+      <p class="games-game-team">Team 4</p>
+    </div>
+    <div class="games-game">
+      <div class="games-game-image"><img src="images/games/CollegeGraduateSimulator.png"></div>
+      <p class="games-game-title">College Graduate Simulator</p>
+      <p class="games-game-team">Team 5</p>
+    </div>
+    <div class="games-game">
+      <div class="games-game-image"><img src="images/games/TheOracleTrials.png"></div>
+      <p class="games-game-title">The Oracle Trials</p>
+      <p class="games-game-team">Team 6</p>
+    </div>
+</template>
+
+<template id="games-2017">
+</template>
 
 
 
 
 
-
-
-
-
-
-
-
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="scripts/games.js"></script>
 
 
 <!-- BEGIN FOOTER -->
@@ -151,14 +182,15 @@
       <a href="#">&copy;</a> 2019 Husky Game Development
     </div>
 
-    <hr>
-
-    <div class="footer-mtu main-content-wrapper">
-      <img src="images/mtu-logo-g.png">
-      <div class="footer-mtu-eoe">
-        Michigan Technological University is an Equal Opportunity Educational Institution/Equal Opportunity Employer, which includes providing equal opportunity for protected veterans and individuals with disabilities.
+    <div class="footer-mtu-background">
+      <div class="footer-mtu main-content-wrapper">
+        <img src="images/mtu-logo-g.png">
+        <div class="footer-mtu-eoe">
+          Michigan Technological University is an Equal Opportunity Educational Institution/Equal Opportunity Employer, which includes providing equal opportunity for protected veterans and individuals with disabilities.
+        </div>
       </div>
     </div>
+
   </footer>
 
 
