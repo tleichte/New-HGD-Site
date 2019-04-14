@@ -24,8 +24,35 @@ function GetYearGames() {
 function ReplaceGameContainer() {
     container.empty();
     container.removeClass("games-container-loading");
-    container.html($("#games-"+currentYear).html())
+    container.html($("#games-"+currentYear).html());
+    $(".games-game").on("click", showModal);
 }
 
 
 GetYearGames();
+
+
+function showModal() {
+    $("#games-modal").fadeIn(300);
+    // $("#games-modal").show();
+    $("#games-modal").removeClass("games-modal-invisible");
+    $("#games-modal").addClass("games-modal-visible");
+    console.log("Clicked on Game");
+}
+
+function hideModal() {
+    $("#games-modal").fadeOut(300);
+    $("#games-modal").removeClass("games-modal-visible");
+    $("#games-modal").addClass("games-modal-invisible");
+}
+
+
+$(".games-modal-close").on("click", hideModal);
+
+$("#games-modal").hide();
+
+
+// $(".games-game").on("click", function() {
+//     console.log("Clicked game");
+//     $("#games-modal").show();
+// })

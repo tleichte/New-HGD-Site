@@ -159,7 +159,7 @@ header {
    
 
 
-    z-index: 99999;
+    z-index: 500;
 
 }
 
@@ -436,10 +436,11 @@ footer {
 
         .home-alumni-post {
 
-            transition: transform 0.3s;
+            transition: transform 0.3s, box-shadow 0.3s;
 
             &:hover {
                 transform: scale(1.05);
+                box-shadow: 7px 7px 7px rgb(150,150,150);
             }
 
 
@@ -456,7 +457,7 @@ footer {
             
             overflow: hidden;
             border: solid 5px black;
-            box-shadow: 5px 5px 5px rgb(150,150,150);
+            box-shadow: 3px 3px 3px rgb(150,150,150);
             border-radius: 150px;
             position: relative;
             background-color: black;
@@ -545,15 +546,25 @@ footer {
 
 
             .games-game-image {
+                position: relative;
                 display: flex;
                 justify-content: center;
                 overflow: hidden;
                 height: 160px;
                 margin-left: -15px;
                 margin-right: -15px;
-                background-color: black;
+                background-color: rgb(10,10,10);
                 img {
                     height: 100%;
+                }
+
+                .inset-shadow {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    box-shadow: 0 0 30px rgb(30,30,30) inset;
                 }
                 
             }
@@ -591,3 +602,174 @@ footer {
 }
 
 
+
+
+.games-modal-visible {
+    .games-modal-inner {
+        transform: scale(1);
+    }
+}
+
+.games-modal-invisible {
+    .games-modal-inner {
+        transform: scale(0.9);
+    }
+}
+
+#games-modal {
+
+    display: flex;
+    justify-content: center;
+    //padding-top: 50px;
+
+    position: fixed;
+
+    background-color: rgba(0,0,0,0.5);
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+
+    z-index: 501;
+
+    .games-modal-inner {
+        position: relative;
+        background-color: white;
+
+        width: 800px;
+        max-height: 90%;
+        max-width: 90%;
+        margin: 5%;
+        // min-height: 300px;
+        // max-height: 700px;
+        overflow-y: auto;
+
+
+        transition: transform 0.3s;
+
+        .games-modal-close {
+            font-size: 30px;
+            font-weight: 300;
+            cursor: pointer;
+            color: rgb(150,150,150);
+            position: absolute;
+            right: 20px;
+            top: 15px;
+            transition: transform 0.3s;
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+
+
+        .games-modal-content {
+            padding: 30px 50px;
+            max-width: 100%;
+
+            .games-modal-title {
+                word-wrap: break-word;
+                font-weight: bold;
+                font-size: 45px;
+            }
+            .games-modal-year {
+                font-size: 28px;
+                font-weight: 300;
+                margin-bottom: 30px;
+            }
+
+            .games-modal-gallery-display {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .games-modal-gallery-display-arrow {
+                    font-size: 50px;
+                    font-weight: 300;
+                    cursor: pointer;
+                    transition: transform 0.3s;
+                    &:hover {
+                        transform: scale(1.2);
+                    }
+                }
+                .arrow-left {
+                    margin-right: 50px;
+                }
+                .arrow-right {
+                    margin-left: 50px;
+                }
+
+                .games-modal-gallery-display-image {
+                    flex-grow: 1;
+                    .games-modal-trailer {
+                        position: relative;
+                        padding-bottom: 56.25%;
+                        height: 0;
+                        iframe {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                        }
+                        //padding-top: 
+                    }
+                }
+            }
+            .games-modal-gallery {
+                margin: 30px 0;
+                overflow-x: auto;
+                display: flex;
+                flex-wrap: nowrap;
+                padding-bottom: 15px;
+                .games-modal-gallery-image {
+                    flex-shrink: 0;
+                    width: 150px;
+                    height: 100px;
+                    //background-color: black;
+                    margin-right: 15px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: relative;
+
+                    & > img {
+                        max-height: 100%;
+                        max-width: 100%;
+                        box-sizing: border-box;
+                        //border: 2px solid #202344;
+                        // height: auto;
+                        // width: auto;
+                    }
+                    .games-modal-trailer-overlay {
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        img {
+                            height: 50px;
+                            width: 50px;
+                        }
+                    }
+                }
+                .selected {
+                    & > img {
+                        border: 5px solid #202344;
+                    }
+                }
+            }
+
+
+
+        }
+
+        .games-modal-content-loading {
+            display: flex;
+            justify-content: center;
+            //align-items: center;
+            height: 100%;
+        }
+    }
+}
