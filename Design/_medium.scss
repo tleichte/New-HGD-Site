@@ -620,7 +620,7 @@ footer {
 
     display: flex;
     justify-content: center;
-    //padding-top: 50px;
+    align-items: flex-start;
 
     position: fixed;
 
@@ -632,17 +632,23 @@ footer {
 
     z-index: 501;
 
+    overflow-y: auto;
+
+
+
     .games-modal-inner {
         position: relative;
         background-color: white;
 
+        box-sizing: border-box;
+
         width: 800px;
-        max-height: 95%;
         max-width: 90%;
-        margin: 2.5% 5%;
-        // min-height: 300px;
-        // max-height: 700px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+
         overflow-y: auto;
+        padding: 15px;
 
 
         transition: transform 0.3s;
@@ -662,19 +668,17 @@ footer {
         }
 
 
-        .games-modal-content {
-            padding: 30px 50px;
-            max-width: 100%;
+        //.games-modal-content {
 
             .games-modal-title {
                 word-wrap: break-word;
                 font-weight: bold;
-                font-size: 45px;
+                font-size: 35px;
             }
             .games-modal-year {
-                font-size: 28px;
+                font-size: 25px;
                 font-weight: 300;
-                margin-bottom: 30px;
+                margin-bottom: 15px;
             }
 
             .games-modal-gallery-display {
@@ -691,10 +695,10 @@ footer {
                     }
                 }
                 .arrow-left {
-                    margin-right: 50px;
+                    margin-right: 75px;
                 }
                 .arrow-right {
-                    margin-left: 50px;
+                    margin-left: 75px;
                 }
 
                 .games-modal-gallery-display-image {
@@ -715,15 +719,16 @@ footer {
                 }
             }
             .games-modal-gallery {
-                margin: 30px 0;
+                margin-top: 15px;
+                margin-bottom: 10px;
                 overflow-x: auto;
                 display: flex;
                 flex-wrap: nowrap;
                 padding-bottom: 15px;
                 .games-modal-gallery-image {
                     flex-shrink: 0;
-                    width: 150px;
-                    height: 100px;
+                    width: 100px;
+                    height: 75px;
                     //background-color: black;
                     margin-right: 15px;
                     display: flex;
@@ -748,6 +753,7 @@ footer {
                         display: flex;
                         justify-content: center;
                         align-items: center;
+                        opacity: 0.5;
                         img {
                             height: 50px;
                             width: 50px;
@@ -763,24 +769,57 @@ footer {
 
             .games-modal-description {
                 display: flex;
+                flex-direction: row-reverse;
 
                 .games-modal-developers {
-                    font-size: 20px;
+                    background-color: rgb(230,230,230);
+                    padding: 5px 15px;
+                    //border-left: 2px solid black;
+                    margin-left: 50px;
+                    //text-align: right;
                     .games-modal-developers-title {
-                        font-size: 35px;
+                        font-size: 25px;
                         font-weight: bold;
+                        margin-bottom: 10px;
                     }
-
+                    .games-modal-developer {
+                        //margin-left: 10px;
+                        font-weight: normal;
+                        font-size: 20px;
+                        margin-bottom: 7px;
+                        white-space: nowrap;
+                        .games-modal-developer-role {
+                            font-size: 15px;
+                            display: block;
+                            //position: relative;
+                            //right: 30px;
+                            font-style: italic;
+                            margin-bottom: 6px;
+                        }
+                    }
                 }
                 .games-modal-description-text {
+                    //border-right: 3px solid black;
+                    
                     flex-grow: 1;
-                    margin-left: 50px;
+                    font-size: 20px;
+                    span {
+                        display: block;
+                        font-size: 25px;
+                        font-weight: bold;
+                        margin-bottom: 20px;
+                    }
+
+                    button {
+                        display: block;
+                        margin-top: 30px;
+                    }
                 }
             }
 
 
 
-        }
+        //}
 
         .games-modal-content-loading {
             display: flex;
