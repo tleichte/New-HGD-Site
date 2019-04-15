@@ -941,9 +941,9 @@ footer .footer-mtu-background .footer-mtu .footer-mtu-eoe {
   position: relative;
   background-color: white;
   width: 800px;
-  max-height: 90%;
+  max-height: 95%;
   max-width: 90%;
-  margin: 5%;
+  margin: 2.5% 5%;
   overflow-y: auto;
   transition: transform 0.3s;
 }
@@ -1047,6 +1047,20 @@ footer .footer-mtu-background .footer-mtu .footer-mtu-eoe {
 }
 #games-modal .games-modal-inner .games-modal-content .games-modal-gallery .selected > img {
   border: 5px solid #202344;
+}
+#games-modal .games-modal-inner .games-modal-content .games-modal-description {
+  display: flex;
+}
+#games-modal .games-modal-inner .games-modal-content .games-modal-description .games-modal-developers {
+  font-size: 20px;
+}
+#games-modal .games-modal-inner .games-modal-content .games-modal-description .games-modal-developers .games-modal-developers-title {
+  font-size: 35px;
+  font-weight: bold;
+}
+#games-modal .games-modal-inner .games-modal-content .games-modal-description .games-modal-description-text {
+  flex-grow: 1;
+  margin-left: 50px;
 }
 #games-modal .games-modal-inner .games-modal-content-loading {
   display: flex;

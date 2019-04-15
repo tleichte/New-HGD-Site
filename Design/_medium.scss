@@ -637,9 +637,9 @@ footer {
         background-color: white;
 
         width: 800px;
-        max-height: 90%;
+        max-height: 95%;
         max-width: 90%;
-        margin: 5%;
+        margin: 2.5% 5%;
         // min-height: 300px;
         // max-height: 700px;
         overflow-y: auto;
@@ -758,6 +758,23 @@ footer {
                     & > img {
                         border: 5px solid #202344;
                     }
+                }
+            }
+
+            .games-modal-description {
+                display: flex;
+
+                .games-modal-developers {
+                    font-size: 20px;
+                    .games-modal-developers-title {
+                        font-size: 35px;
+                        font-weight: bold;
+                    }
+
+                }
+                .games-modal-description-text {
+                    flex-grow: 1;
+                    margin-left: 50px;
                 }
             }
 
