@@ -463,9 +463,13 @@ th {
 
 body {
   background-color: white;
-  font-size: 110%;
+  font-size: 30px;
   font-family: 'Work Sans', sans-serif;
   scroll-behavior: smooth;
+}
+
+.modal-open {
+  overflow: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -634,6 +638,7 @@ footer .footer-social img:hover {
 footer .footer-copyright {
   text-align: center;
   margin: 30px 0;
+  font-size: 20px;
   font-weight: 300;
 }
 footer .footer-mtu-background {
@@ -999,11 +1004,19 @@ footer .footer-mtu-background .footer-mtu .footer-mtu-eoe {
 }
 #games-modal .games-modal-container .games-modal-inner .games-modal-gallery-display .games-modal-gallery-display-image {
   flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#games-modal .games-modal-container .games-modal-inner .games-modal-gallery-display .games-modal-gallery-display-image img {
+  max-height: 100%;
+  max-width: 100%;
 }
 #games-modal .games-modal-container .games-modal-inner .games-modal-gallery-display .games-modal-gallery-display-image .games-modal-trailer {
   position: relative;
   padding-bottom: 56.25%;
   height: 0;
+  flex-grow: 1;
 }
 #games-modal .games-modal-container .games-modal-inner .games-modal-gallery-display .games-modal-gallery-display-image .games-modal-trailer iframe {
   position: absolute;
@@ -1029,6 +1042,11 @@ footer .footer-mtu-background .footer-mtu .footer-mtu-eoe {
   justify-content: center;
   align-items: center;
   position: relative;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+#games-modal .games-modal-container .games-modal-inner .games-modal-gallery .games-modal-gallery-image:hover {
+  transform: scale(0.9);
 }
 #games-modal .games-modal-container .games-modal-inner .games-modal-gallery .games-modal-gallery-image > img {
   max-height: 100%;
@@ -1045,10 +1063,14 @@ footer .footer-mtu-background .footer-mtu .footer-mtu-eoe {
   justify-content: center;
   align-items: center;
   opacity: 0.5;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 #games-modal .games-modal-container .games-modal-inner .games-modal-gallery .games-modal-gallery-image .games-modal-trailer-overlay img {
   height: 50px;
   width: 50px;
+}
+#games-modal .games-modal-container .games-modal-inner .games-modal-gallery .selected:hover {
+  transform: none;
 }
 #games-modal .games-modal-container .games-modal-inner .games-modal-gallery .selected > img {
   border: 5px solid #202344;
@@ -1092,13 +1114,15 @@ footer .footer-mtu-background .footer-mtu .footer-mtu-eoe {
   margin-bottom: 10px;
 }
 #games-modal .games-modal-container .games-modal-inner .games-modal-description .games-modal-description-text button {
-  display: block;
   margin-top: 30px;
 }
 #games-modal .games-modal-container .games-modal-inner .games-modal-content-loading {
   display: flex;
   justify-content: center;
-  height: 100%;
+}
+#games-modal .games-modal-container .games-modal-inner .games-modal-content-loading img {
+  max-height: 100px;
+  max-width: 100px;
 }
 
 /* Small/Default Styles */
