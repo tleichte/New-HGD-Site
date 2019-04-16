@@ -474,6 +474,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
+  margin-bottom: 30px;
 }
 
 h1 {
@@ -732,7 +733,6 @@ footer .footer-mtu-background .footer-mtu .footer-mtu-eoe {
 }
 .home-mission .home-mission-description .home-mission-description-mission {
   font-size: 40px;
-  margin-top: 40px;
   font-weight: 300;
   color: #323232;
 }
@@ -753,7 +753,6 @@ footer .footer-mtu-background .footer-mtu .footer-mtu-eoe {
 }
 .home-about .home-about-container .home-about-description .home-about-description-text {
   font-size: 40px;
-  margin-top: 40px;
   font-weight: 300;
   color: #323232;
 }
@@ -774,7 +773,6 @@ footer .footer-mtu-background .footer-mtu .footer-mtu-eoe {
 }
 .home-method .home-method-description {
   font-size: 40px;
-  margin-top: 40px;
   font-weight: 300;
   color: #323232;
   margin-bottom: 50px;
@@ -792,7 +790,7 @@ footer .footer-mtu-background .footer-mtu .footer-mtu-eoe {
   text-align: center;
 }
 .home-alumni .home-alumni-container {
-  margin-top: 50px;
+  margin-top: 20px;
   display: flex;
   justify-content: flex-start;
   justify-content: center;
@@ -840,7 +838,7 @@ footer .footer-mtu-background .footer-mtu .footer-mtu-eoe {
 
 .games-outer-container {
   display: flex;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 .games-outer-container .games-years .games-year {
   font-size: 25px;
