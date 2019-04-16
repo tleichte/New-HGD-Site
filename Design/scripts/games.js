@@ -72,6 +72,12 @@ $(".games-modal-close").on("click", hideModal);
 $("#games-modal").hide();
 
 
+$("#games-modal").on("click", function(event) {
+    if (!$(event.target).is(".games-modal-inner") && !$(event.target).closest('.games-modal-inner').length) {
+        hideModal()
+    }   
+});
+
 function ReplaceGalleryImage(imageClicked) {
     $(".games-modal-gallery-image").removeClass("selected");
     $(imageClicked).addClass("selected");
