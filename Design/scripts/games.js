@@ -1,3 +1,5 @@
+(function($) {
+
 var yearList = $(".games-year");
 
 var container = $("#games-container");
@@ -88,3 +90,4 @@ function ReplaceGalleryImage(imageClicked) {
     }
     $(".games-modal-gallery-display-image").html(outHTML);
 }
+})( jQuery );
