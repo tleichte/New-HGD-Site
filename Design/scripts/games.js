@@ -3,7 +3,6 @@ var yearList = $(".games-year");
 var container = $("#games-container");
 
 var currentYear = $(".games-year-selected").first().attr("year");
-console.log(currentYear);
 
 yearList.on("click", function() {
     yearList.removeClass("games-year-selected");
@@ -52,7 +51,3 @@ $(".games-modal-close").on("click", hideModal);
 $("#games-modal").hide();
 
 
-// $(".games-game").on("click", function() {
-//     console.log("Clicked game");
-//     $("#games-modal").show();
-// })

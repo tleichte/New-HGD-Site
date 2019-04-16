@@ -939,7 +939,10 @@ footer .footer-mtu-background .footer-mtu .footer-mtu-eoe {
   z-index: 501;
   overflow-y: auto;
 }
-#games-modal .games-modal-inner {
+#games-modal .games-modal-container {
+  overflow: auto;
+}
+#games-modal .games-modal-container .games-modal-inner {
   position: relative;
   background-color: white;
   box-sizing: border-box;
@@ -948,10 +951,10 @@ footer .footer-mtu-background .footer-mtu .footer-mtu-eoe {
   margin-top: 15px;
   margin-bottom: 15px;
   overflow-y: auto;
-  padding: 15px;
+  padding: 30px 40px;
   transition: transform 0.3s;
 }
-#games-modal .games-modal-inner .games-modal-close {
+#games-modal .games-modal-container .games-modal-inner .games-modal-close {
   font-size: 30px;
   font-weight: 300;
   cursor: pointer;
@@ -961,63 +964,63 @@ footer .footer-mtu-background .footer-mtu .footer-mtu-eoe {
   top: 15px;
   transition: transform 0.3s;
 }
-#games-modal .games-modal-inner .games-modal-close:hover {
+#games-modal .games-modal-container .games-modal-inner .games-modal-close:hover {
   transform: scale(1.2);
 }
-#games-modal .games-modal-inner .games-modal-title {
+#games-modal .games-modal-container .games-modal-inner .games-modal-title {
   word-wrap: break-word;
   font-weight: bold;
   font-size: 35px;
 }
-#games-modal .games-modal-inner .games-modal-year {
+#games-modal .games-modal-container .games-modal-inner .games-modal-year {
   font-size: 25px;
   font-weight: 300;
   margin-bottom: 15px;
 }
-#games-modal .games-modal-inner .games-modal-gallery-display {
+#games-modal .games-modal-container .games-modal-inner .games-modal-gallery-display {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-#games-modal .games-modal-inner .games-modal-gallery-display .games-modal-gallery-display-arrow {
+#games-modal .games-modal-container .games-modal-inner .games-modal-gallery-display .games-modal-gallery-display-arrow {
   font-size: 50px;
   font-weight: 300;
   cursor: pointer;
   transition: transform 0.3s;
 }
-#games-modal .games-modal-inner .games-modal-gallery-display .games-modal-gallery-display-arrow:hover {
+#games-modal .games-modal-container .games-modal-inner .games-modal-gallery-display .games-modal-gallery-display-arrow:hover {
   transform: scale(1.2);
 }
-#games-modal .games-modal-inner .games-modal-gallery-display .arrow-left {
+#games-modal .games-modal-container .games-modal-inner .games-modal-gallery-display .arrow-left {
   margin-right: 75px;
 }
-#games-modal .games-modal-inner .games-modal-gallery-display .arrow-right {
+#games-modal .games-modal-container .games-modal-inner .games-modal-gallery-display .arrow-right {
   margin-left: 75px;
 }
-#games-modal .games-modal-inner .games-modal-gallery-display .games-modal-gallery-display-image {
+#games-modal .games-modal-container .games-modal-inner .games-modal-gallery-display .games-modal-gallery-display-image {
   flex-grow: 1;
 }
-#games-modal .games-modal-inner .games-modal-gallery-display .games-modal-gallery-display-image .games-modal-trailer {
+#games-modal .games-modal-container .games-modal-inner .games-modal-gallery-display .games-modal-gallery-display-image .games-modal-trailer {
   position: relative;
   padding-bottom: 56.25%;
   height: 0;
 }
-#games-modal .games-modal-inner .games-modal-gallery-display .games-modal-gallery-display-image .games-modal-trailer iframe {
+#games-modal .games-modal-container .games-modal-inner .games-modal-gallery-display .games-modal-gallery-display-image .games-modal-trailer iframe {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
 }
-#games-modal .games-modal-inner .games-modal-gallery {
+#games-modal .games-modal-container .games-modal-inner .games-modal-gallery {
   margin-top: 15px;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
   overflow-x: auto;
   display: flex;
   flex-wrap: nowrap;
   padding-bottom: 15px;
 }
-#games-modal .games-modal-inner .games-modal-gallery .games-modal-gallery-image {
+#games-modal .games-modal-container .games-modal-inner .games-modal-gallery .games-modal-gallery-image {
   flex-shrink: 0;
   width: 100px;
   height: 75px;
@@ -1027,12 +1030,12 @@ footer .footer-mtu-background .footer-mtu .footer-mtu-eoe {
   align-items: center;
   position: relative;
 }
-#games-modal .games-modal-inner .games-modal-gallery .games-modal-gallery-image > img {
+#games-modal .games-modal-container .games-modal-inner .games-modal-gallery .games-modal-gallery-image > img {
   max-height: 100%;
   max-width: 100%;
   box-sizing: border-box;
 }
-#games-modal .games-modal-inner .games-modal-gallery .games-modal-gallery-image .games-modal-trailer-overlay {
+#games-modal .games-modal-container .games-modal-inner .games-modal-gallery .games-modal-gallery-image .games-modal-trailer-overlay {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -1043,54 +1046,56 @@ footer .footer-mtu-background .footer-mtu .footer-mtu-eoe {
   align-items: center;
   opacity: 0.5;
 }
-#games-modal .games-modal-inner .games-modal-gallery .games-modal-gallery-image .games-modal-trailer-overlay img {
+#games-modal .games-modal-container .games-modal-inner .games-modal-gallery .games-modal-gallery-image .games-modal-trailer-overlay img {
   height: 50px;
   width: 50px;
 }
-#games-modal .games-modal-inner .games-modal-gallery .selected > img {
+#games-modal .games-modal-container .games-modal-inner .games-modal-gallery .selected > img {
   border: 5px solid #202344;
 }
-#games-modal .games-modal-inner .games-modal-description {
+#games-modal .games-modal-container .games-modal-inner .games-modal-description {
   display: flex;
   flex-direction: row-reverse;
 }
-#games-modal .games-modal-inner .games-modal-description .games-modal-developers {
+#games-modal .games-modal-container .games-modal-inner .games-modal-description .games-modal-developers {
   background-color: #e6e6e6;
-  padding: 5px 15px;
+  padding: 15px 20px;
   margin-left: 50px;
 }
-#games-modal .games-modal-inner .games-modal-description .games-modal-developers .games-modal-developers-title {
+#games-modal .games-modal-container .games-modal-inner .games-modal-description .games-modal-developers .games-modal-developers-title {
   font-size: 25px;
   font-weight: bold;
   margin-bottom: 10px;
 }
-#games-modal .games-modal-inner .games-modal-description .games-modal-developers .games-modal-developer {
+#games-modal .games-modal-container .games-modal-inner .games-modal-description .games-modal-developers .games-modal-developer {
   font-weight: normal;
   font-size: 20px;
   margin-bottom: 7px;
   white-space: nowrap;
 }
-#games-modal .games-modal-inner .games-modal-description .games-modal-developers .games-modal-developer .games-modal-developer-role {
+#games-modal .games-modal-container .games-modal-inner .games-modal-description .games-modal-developers .games-modal-developer:last-child {
+  margin-bottom: 0;
+}
+#games-modal .games-modal-container .games-modal-inner .games-modal-description .games-modal-developers .games-modal-developer .games-modal-developer-role {
   font-size: 15px;
   display: block;
   font-style: italic;
-  margin-bottom: 6px;
 }
-#games-modal .games-modal-inner .games-modal-description .games-modal-description-text {
+#games-modal .games-modal-container .games-modal-inner .games-modal-description .games-modal-description-text {
   flex-grow: 1;
   font-size: 20px;
 }
-#games-modal .games-modal-inner .games-modal-description .games-modal-description-text span {
+#games-modal .games-modal-container .games-modal-inner .games-modal-description .games-modal-description-text span {
   display: block;
   font-size: 25px;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
-#games-modal .games-modal-inner .games-modal-description .games-modal-description-text button {
+#games-modal .games-modal-container .games-modal-inner .games-modal-description .games-modal-description-text button {
   display: block;
   margin-top: 30px;
 }
-#games-modal .games-modal-inner .games-modal-content-loading {
+#games-modal .games-modal-container .games-modal-inner .games-modal-content-loading {
   display: flex;
   justify-content: center;
   height: 100%;
