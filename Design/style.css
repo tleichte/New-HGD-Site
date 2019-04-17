@@ -1123,6 +1123,10 @@ footer .footer-mtu-background .footer-mtu .footer-mtu-eoe {
   max-width: 100px;
 }
 
+.about-container p {
+  margin-top: 15px;
+}
+
 /* Small/Default Styles */
 
 /*# sourceMappingURL=style.css.map */
