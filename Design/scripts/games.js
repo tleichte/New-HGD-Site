@@ -1,5 +1,14 @@
 (function($) {
 
+
+    $(document).ready(function() {
+        var url = new URL(window.location.href);
+        //var queryYear = url.searchParams.get("year");
+        var queryGame = url.searchParams.get("game");
+        console.log("Query Game: "+queryGame);
+    });
+
+
 var yearList = $(".games-year");
 
 var container = $("#games-container");
@@ -32,7 +41,6 @@ function ReplaceGameContainer() {
         showModal()
         $("#games-modal-content").addClass("games-modal-content-loading");
         $("#games-modal-content").html($("#loading").html());
-        //console.log($(this).attr("game"));
         currentGame = $(this).attr("game") || "orbit";
         setTimeout(ReplaceModalContent, 500);
     });
@@ -51,7 +59,6 @@ GetYearGames();
 
 function showModal() {
     $("#games-modal").fadeIn(300);
-    // $("#games-modal").show();
     $("body").addClass("modal-open");
     $("#games-modal").removeClass("games-modal-invisible");
     $("#games-modal").addClass("games-modal-visible");
@@ -96,4 +103,6 @@ function ReplaceGalleryImage(imageClicked) {
     }
     $(".games-modal-gallery-display-image").html(outHTML);
 }
+
+
 })( jQuery );
