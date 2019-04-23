@@ -848,18 +848,45 @@ footer {
     
 }
 
+.about-container {
 
-.about-paragraph {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 50px;
-    p {
-        //display: block;
-        text-align: justify;
-        width: 800px;
-        margin-top: 30px;
-        line-height: 1.05;
+    h2 {
+        text-align: center;
+    }
+    .about-paragraph {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 50px;
+        p {
+            //display: block;
+            text-align: justify;
+            width: 800px;
+            margin-top: 30px;
+            line-height: 1.05;
+        }
+    }
+    .about-management {
+        display: flex;
+        justify-content: center;
+        .about-manager {
+            width: 200px;
+            margin: 15px 50px;
+            .about-manager-image-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+                border-radius: 50%;
+                width: 200px;
+                height: 200px;
+                background-color: black;
+                img {
+                    max-width: 100%;
+                }
+            }
+
+        }
     }
 }

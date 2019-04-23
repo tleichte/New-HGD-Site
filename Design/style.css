@@ -1123,18 +1123,42 @@ footer .footer-mtu-background .footer-mtu .footer-mtu-eoe {
   max-width: 100px;
 }
 
-.about-paragraph {
+.about-container h2 {
+  text-align: center;
+}
+.about-container .about-paragraph {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-bottom: 50px;
 }
-.about-paragraph p {
+.about-container .about-paragraph p {
   text-align: justify;
   width: 800px;
   margin-top: 30px;
   line-height: 1.05;
+}
+.about-container .about-management {
+  display: flex;
+  justify-content: center;
+}
+.about-container .about-management .about-manager {
+  width: 200px;
+  margin: 15px 50px;
+}
+.about-container .about-management .about-manager .about-manager-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  background-color: black;
+}
+.about-container .about-management .about-manager .about-manager-image-container img {
+  max-width: 100%;
 }
 
 /* Small/Default Styles */
