@@ -1123,8 +1123,18 @@ footer .footer-mtu-background .footer-mtu .footer-mtu-eoe {
   max-width: 100px;
 }
 
-.about-container p {
-  margin-top: 15px;
+.about-paragraph {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.about-paragraph p {
+  text-align: justify;
+  width: 800px;
+  margin-top: 30px;
+  line-height: 1.05;
 }
 
 /* Small/Default Styles */

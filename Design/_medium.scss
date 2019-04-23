@@ -18,7 +18,7 @@ $content-wrapping-width: 1450px;
     width: 100%;
 }
 
-@mixin home-description {
+@mixin main-description {
     font-size: 40px;
     //margin-top: 40px;
     font-weight: 300;
@@ -360,7 +360,7 @@ footer {
         margin-left: 50px;
 
         .home-mission-description-mission {
-            @include home-description();
+            @include main-description();
         }
 
         .home-mission-description-button {
@@ -383,7 +383,7 @@ footer {
         .home-about-description {
             margin-right: 50px;
             .home-about-description-text {
-                @include home-description();
+                @include main-description();
             }
         }
 
@@ -413,7 +413,7 @@ footer {
     }
 
     .home-method-description {
-        @include home-description();
+        @include main-description();
         margin-bottom: 50px;
     }
 
@@ -849,9 +849,17 @@ footer {
 }
 
 
-.about-container {
-
+.about-paragraph {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
     p {
-        margin-top: 15px;
+        //display: block;
+        text-align: justify;
+        width: 800px;
+        margin-top: 30px;
+        line-height: 1.05;
     }
 }

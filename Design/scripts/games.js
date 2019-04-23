@@ -52,6 +52,7 @@ function ReplaceModalContent() {
     $(".games-modal-gallery-image").on("click", function() {
         ReplaceGalleryImage(this);
     });
+    ReplaceGalleryImage($(".games-modal-gallery-image").first());
 }
 
 GetYearGames();
@@ -71,6 +72,7 @@ function hideModal() {
     $("body").removeClass("modal-open");
     $("#games-modal").removeClass("games-modal-visible");
     $("#games-modal").addClass("games-modal-invisible");
+    setTimeout(function () {$("#games-modal-content").html("");}, 500);
 }
 
 
@@ -93,7 +95,7 @@ function ReplaceGalleryImage(imageClicked) {
     switch($(imageClicked).attr("gallery-type")) {
         case "trailer":
             outHTML += "<div class='games-modal-trailer'>";
-            outHTML += "<iframe src='https://www.youtube.com/embed/"+$(imageClicked).attr("gallery-trailer-id")+"'";
+            outHTML += "<iframe src='https://www.youtube.com/embed/"+$(imageClicked).attr("gallery-trailer-id")+"?rel=0'";
             outHTML += "frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen";
             outHTML += "></iframe>";
             break;
