@@ -94,7 +94,11 @@ button {
     
 }
 
-
+.clearfix::after {
+content: "";
+clear: both;
+display: table;
+}
 
 .main-content-wrapper {
     max-width: 100%;
@@ -850,15 +854,12 @@ footer {
 
 .about-container {
 
-    h2 {
-        text-align: center;
-    }
     .about-paragraph {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-bottom: 50px;
+        margin-bottom: 100px;
         p {
             //display: block;
             text-align: justify;
@@ -869,10 +870,17 @@ footer {
     }
     .about-management {
         display: flex;
-        justify-content: center;
+        //justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 100px;
         .about-manager {
-            width: 200px;
-            margin: 15px 50px;
+            width: 275px;
+            margin: 15px 30px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
             .about-manager-image-container {
                 display: flex;
                 justify-content: center;
@@ -887,6 +895,40 @@ footer {
                 }
             }
 
+            .about-manager-name {
+                margin-top: 15px;
+                font-size: 35px;
+                font-weight: bold;
+            }
+            .about-manager-title {
+                font-size: 20px;
+                margin-top: 10px;
+            }
+
+        }
+    }
+
+
+    .about-advisor {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        .about-advisor-image {
+            
+            img {
+                width: 300px;
+                border: 5px solid black;
+                //border-radius: 50%;
+            }
+            //float: left;
+        }
+        .about-advisor-description {
+            margin-left: 50px;
+            flex-grow: 1;
+            button {
+                //display: block;
+                margin-top: 30px;
+            }
         }
     }
 }
