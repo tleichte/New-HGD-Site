@@ -1195,6 +1195,11 @@ footer .footer-mtu-background .footer-mtu .footer-mtu-eoe {
   margin-top: 30px;
 }
 
+.join-container .join-image {
+  width: 100%;
+  height: 300px;
+}
+
 /* Small/Default Styles */
 
 /*# sourceMappingURL=style.css.map */
