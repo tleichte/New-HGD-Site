@@ -1142,13 +1142,17 @@ footer .footer-mtu-background .footer-mtu .footer-mtu-eoe {
   margin-top: 30px;
   line-height: 1.05;
 }
+.about-container .about-management-title {
+  text-align: center;
+}
 .about-container .about-management {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   margin-bottom: 100px;
 }
 .about-container .about-management .about-manager {
-  width: 275px;
+  width: 300px;
   margin: 15px 30px;
   text-align: center;
   display: flex;
@@ -1191,6 +1195,12 @@ footer .footer-mtu-background .footer-mtu .footer-mtu-eoe {
   margin-left: 50px;
   flex-grow: 1;
 }
+.about-container .about-advisor .about-advisor-description .about-advisor-description-text {
+  font-size: 40px;
+  font-weight: 300;
+  color: #323232;
+  margin-bottom: 15px;
+}
 .about-container .about-advisor .about-advisor-description button {
   margin-top: 30px;
 }
@@ -1198,6 +1208,15 @@ footer .footer-mtu-background .footer-mtu .footer-mtu-eoe {
 .join-container .join-image {
   width: 100%;
   height: 300px;
+}
+
+.contact-container .contact-form {
+  width: 100%;
+}
+.contact-container .contact-stopin {
+  font-size: 40px;
+  font-weight: 300;
+  color: #323232;
 }
 
 /* Small/Default Styles */
