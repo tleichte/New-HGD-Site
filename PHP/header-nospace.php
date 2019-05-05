@@ -2,27 +2,21 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <link rel="stylesheet" type="text/css" href="style.css">
-
-
-
-    <title>Husky Game Development</title>
+    <!-- <title><?php echo get_bloginfo('name'); ?></title> -->
+    <?php wp_head(); ?>
   </head>
   <body>
 
         <header>
           <div class="header main-content-wrapper">
             <div class="header-logo-container">
-              <a href="index.html">
-                  <img class="header-logo" src="images/header-logo.svg">
+              <a href="<?php echo get_home_url(); ?>">
+                  <img class="header-logo" src="<?php echo get_template_directory_uri(); ?>/images/header-logo.svg">
               </a>
             </div>
             <nav class="header-nav">
-              <ul>
+              <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
+              <!-- <ul>
                 <li>
                   <a href="index.html">Home</a>
                 </li>
@@ -38,7 +32,7 @@
                 <li>
                   <a href="contact.html">Contact</a>
                 </li>
-              </ul>
+              </ul> -->
             </nav>
           </div>
         </header>
