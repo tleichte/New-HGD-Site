@@ -13,7 +13,6 @@ var yearList = $(".games-year");
 
 var container = $("#games-container");
 
-var currentGame;
 
 yearList.on("click", function() {
     //Actions to year list
