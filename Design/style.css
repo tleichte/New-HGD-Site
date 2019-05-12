@@ -9,7 +9,7 @@ Version: 0.0.1
    License: none (public domain)
 */
 @import url("https://use.typekit.net/dvm7hsc.css");
-@import url("https://fonts.googleapis.com/css?family=Work+Sans:300,400,700");
+@import url("https://fonts.googleapis.com/css?family=Muli:300,400,700");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -464,7 +464,7 @@ th {
 body {
   background-color: white;
   font-size: 30px;
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Muli', sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -847,8 +847,9 @@ footer .footer-mtu-background .footer-mtu .footer-mtu-eoe {
   margin-top: 20px;
 }
 .games-outer-container .games-years .games-year {
-  font-size: 25px;
+  font-size: 20px;
   padding: 15px 30px;
+  white-space: nowrap;
   transition: background-color 0.3s;
 }
 .games-outer-container .games-years .games-year:hover {
@@ -1078,6 +1079,11 @@ footer .footer-mtu-background .footer-mtu .footer-mtu-eoe {
 }
 #games-modal .games-modal-container .games-modal-inner .games-modal-gallery .selected > img {
   border: 5px solid #202344;
+}
+#games-modal .games-modal-container .games-modal-inner .games-modal-nogallery {
+  display: flex;
+  justify-content: center;
+  margin: 15px 0;
 }
 #games-modal .games-modal-container .games-modal-inner .games-modal-description {
   display: flex;

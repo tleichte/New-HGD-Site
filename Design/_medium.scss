@@ -36,7 +36,7 @@ $content-wrapping-width: 1450px;
 body {
     background-color: white;
     font-size: 30px;
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Muli', sans-serif;
     scroll-behavior: smooth;
     //overflow: auto;
 }
@@ -510,9 +510,9 @@ footer {
 
     .games-years {
         .games-year {
-            font-size: 25px;
+            font-size: 20px;
             padding: 15px 30px;
-
+            white-space: nowrap;
             transition: background-color 0.3s;
             &:hover {
                 cursor: pointer;
@@ -789,6 +789,12 @@ footer {
                         border: 5px solid #202344;
                     }
                 }
+            }
+
+            .games-modal-nogallery {
+                display: flex;
+                justify-content: center;
+                margin: 15px 0;
             }
 
             .games-modal-description {

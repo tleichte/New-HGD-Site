@@ -10,23 +10,7 @@
 
 
     <div class="footer-nav">
-        <ul>
-          <li>
-            <a href="index.html">Home</a>
-          </li>
-          <li>
-            <a href="about.html">About</a>
-          </li>
-          <li>
-            <a href="games.html">Games</a>
-          </li>
-          <li>
-            <a href="sponsors.html">Sponsors</a>
-          </li>
-          <li>
-            <a href="contact.html">Contact</a>
-          </li>
-        </ul>
+      <?php wp_nav_menu( array( 'theme_location' => 'footer-menu' ) ); ?>
     </div>
 
     <div class="footer-social">
