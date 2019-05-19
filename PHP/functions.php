@@ -64,3 +64,12 @@ function hgd_menus() {
     );
 }
 add_action( 'init', 'hgd_menus' );
+
+
+
+
+
+function hgd_editor_styles() {
+    add_editor_style("editor-styles.css");
+}
+add_action ('init', 'hgd_editor_styles');

@@ -17,6 +17,8 @@ Version: 0.0.1
 
 @import "mixin";
 
+/* Base Styles */
+@import "base";
 
 /* Medium Styles */
 @import "medium";
@@ -30,4 +32,8 @@ Version: 0.0.1
 @media screen and (max-width: 771px)
 {
     @import "small";
+}
+
+.editor-styled {
+    @import "editor";
 }

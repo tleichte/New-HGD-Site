@@ -1,13 +1,8 @@
 $top-height: 100px;
 
-$max-font-size: 70px;
-
 $content-wrapping-width: 1450px;
 
 
-@mixin headersize($t) {
-    font-size: $max-font-size * $t;
-}
 
 
 @mixin full-fixed {
@@ -33,72 +28,10 @@ $content-wrapping-width: 1450px;
 }
 
 
-body {
-    background-color: white;
-    font-size: 30px;
-    font-family: 'Muli', sans-serif;
-    scroll-behavior: smooth;
-    //overflow: auto;
-}
-
 .modal-open {
     overflow: hidden;
 }
 
-
-
-h1, h2, h3, h4, h5, h6 {
-    font-weight: bold;
-    margin-bottom: 30px;
-}
-
-h1 {
-    @include headersize(1);
-}
-h2 {
-    @include headersize(0.85);
-}
-h3 {
-    @include headersize(0.73);
-    //font-size: headersize(0.5);
-}
-h4 {
-    @include headersize(0.6);
-    //font-size: headersize(0.3);
-}
-h5 {
-    @include headersize(0.5);
-}
-h6 {
-    @include headersize(0.4);
-}
-
-
-button {
-    background-color: white;
-    border: 3px solid black;
-    padding: 15px 30px;
-    font-weight: 300;
-    font-size: 30px;
-
-    transition: transform 0.3s;
-
-    &:hover {
-        background-color: rgb(220,220,220);
-        transform: scale(1.05);
-    }
-
-    &:active {
-        transform: scale(1);
-    }
-    
-}
-
-.clearfix::after {
-content: "";
-clear: both;
-display: table;
-}
 
 .main-content-wrapper {
     max-width: 100%;
