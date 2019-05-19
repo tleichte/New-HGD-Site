@@ -32,40 +32,65 @@
 
   <div class="about-management">
 
+<?php 
 
-    <?php 
+    function show_managers($args) {
+      $query = new WP_Query($args);
+      while ($query->have_posts()) {
+        $query->the_post();
 
-        $args = array(
-            'post_type' => 'management',
-        );
-        $management_query = new WP_Query($args);
+        $image = get_field("photo");
+        $default_image = get_field("default_photo");
+        $name = get_field("name");
+        $m_title = get_the_title();
+?>
+        <div class="about-manager">
+          <div class="about-manager-image-container">
+            <img src="<?php 
+                if ($image) {
+                    echo $image['url'];
+                }
+                else {
+                    echo $default_image['url'];
+                }
+            ?>">
+          </div>
+          <div class="about-manager-name"><?php echo $name; ?></div>
+          <div class="about-manager-title"><?php echo $m_title; ?></div>
+        </div>
+<?php
+      }
+    }
 
+    //Show all prepended managers
+    $prepend_args = array(
+      'post_type' => 'management',
+      'meta_query' => array(
+        array(
+          'key' => 'prepended',
+          'compare' => '=',
+          'value' => '1'
+        )
+      )
+    );
+    show_managers($prepend_args);
 
-        while ($management_query->have_posts()):
-            $management_query->the_post(); 
-
-            $image = get_field("photo");
-            $default_image = get_field("default_photo");
-            $name = get_field("name");
-            $m_title = get_the_title();
-    ?>
-
-    <div class="about-manager">
-      <div class="about-manager-image-container">
-        <img src="<?php 
-            if ($image) {
-                echo $image['url'];
-            }
-            else {
-                echo $default_image['url'];
-            }
-        ?>">
-      </div>
-      <div class="about-manager-name"><?php echo $name; ?></div>
-      <div class="about-manager-title"><?php echo $m_title; ?></div>
-    </div>
-
-    <?php endwhile; ?>
+    //Show all other managers (name alphabetized)
+    $manager_args = array(
+      'post_type' => 'management',
+      'orderby' => 'meta_value',
+      'meta_key' => 'name',
+      'order' => 'ASC',
+      'meta_query' => array(
+        array(
+          'key' => 'prepended',
+          'compare' => '=',
+          'value' => '0'
+        )
+      )
+    );
+    show_managers($manager_args);
+?>
   </div>
 
   
