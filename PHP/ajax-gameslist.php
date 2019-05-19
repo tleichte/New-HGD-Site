@@ -1,6 +1,8 @@
 <?php 
     $args = array(
         'post_type' => 'games_posts',
+        'orderby' => 'title',
+        'order' => 'ASC',
         'tax_query' => array(array(
             'taxonomy' => 'game_year',
             'field' => 'slug',
