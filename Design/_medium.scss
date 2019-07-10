@@ -75,6 +75,10 @@ header {
             }
         }
 
+        .header-mobile-hamburger {
+            display: none;
+        }
+
         .header-nav {
             //background-color: white;
             color: white;
@@ -91,6 +95,11 @@ header {
                         font-size: 20px;
                         transition: background-color 0.3s;
                         &:hover {
+                            background-color: rgb(30,30,30);
+                        }
+                    }
+                    &.current-menu-item {
+                        a {
                             background-color: rgb(30,30,30);
                         }
                     }
@@ -264,7 +273,8 @@ footer {
         font-size: 30px;
         font-family: pt-sans-narrow, sans-serif;
         font-weight: 300;
-        
+        text-align: center;
+
         a {
             text-decoration: underline;
             position: relative;
@@ -292,6 +302,11 @@ footer {
     display: flex;
     justify-content: flex-start;
     position: relative;
+
+    .home-mission-image {
+        width: 500px;
+        height: 500px;
+    }
 
     .home-mission-description {
         margin-left: 50px;
@@ -356,7 +371,7 @@ footer {
 
     .home-method-image {
         width: 100%;
-        height: 600px;
+        max-height: 600px;
     }
 }
 
@@ -379,12 +394,12 @@ footer {
 
         .home-alumni-post {
 
-            transition: transform 0.3s, box-shadow 0.3s;
+            // transition: transform 0.3s, box-shadow 0.3s;
 
-            &:hover {
-                transform: scale(1.05);
-                box-shadow: 7px 7px 7px rgb(150,150,150);
-            }
+            // &:hover {
+            //     transform: scale(1.05);
+            //     box-shadow: 7px 7px 7px rgb(150,150,150);
+            // }
 
 
             display: flex;
@@ -393,10 +408,10 @@ footer {
             box-sizing: border-box;
 
             width: 400px;
+            max-width: 100%;
             height: 215px;
             margin: 0 15px;
             margin-bottom: 30px;
-
             
             overflow: hidden;
             border: solid 5px black;
@@ -474,13 +489,11 @@ footer {
             padding-top: 0px;
             background-color: rgb(240,240,240);
 
-            //position: relative;
-
             transition: transform 0.2s, box-shadow 0.2s;
             cursor: pointer;
             transform-origin: bottom right;
             box-shadow: 3px 3px 3px rgb(180,180,180);
-            //border-radius: 30px;
+
             &:hover {
                 transform: scale(1.03);// translate(-5px, -5px);
                 box-shadow: 7px 7px 7px rgb(180,180,180);
@@ -580,6 +593,8 @@ footer {
     .games-modal-container {
 
         overflow: auto;
+        display: flex;
+        justify-content: center;
 
         .games-modal-inner {
             position: relative;
@@ -648,6 +663,7 @@ footer {
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    height: 360px;
                     img {
                         max-height: 100%;
                         max-width: 100%;
@@ -670,7 +686,6 @@ footer {
             }
             .games-modal-gallery {
                 margin-top: 15px;
-                margin-bottom: 30px;
                 overflow-x: auto;
                 display: flex;
                 flex-wrap: nowrap;
@@ -732,6 +747,8 @@ footer {
             .games-modal-description {
                 display: flex;
                 flex-direction: row-reverse;
+                align-items: flex-start;
+                margin-top: 30px;
 
                 .games-modal-developers {
                     background-color: rgb(230,230,230);
@@ -761,16 +778,19 @@ footer {
                 .games-modal-description-text {
                     flex-grow: 1;
                     font-size: 20px;
-                    span {
+                    .games-modal-description-text-header {
                         display: block;
                         font-size: 25px;
                         font-weight: bold;
                         margin-bottom: 10px;
                     }
+                    .games-modal-description-text-text {
+                        margin-bottom: 30px;
+                    }
 
                     button {
                         //display: block;
-                        margin-top: 30px;
+                        // margin-top: 30px;
                     }
                 }
             }
@@ -792,6 +812,11 @@ footer {
 
 .about-container {
 
+    .about-image {
+        max-height: 500px;
+        width: 100%;
+    }
+
     .about-paragraph {
         display: flex;
         flex-direction: column;
@@ -799,9 +824,9 @@ footer {
         align-items: center;
         margin-bottom: 100px;
         p {
-            //display: block;
             text-align: justify;
             width: 800px;
+            max-width: 100%;
             margin-top: 30px;
             line-height: 1.05;
         }
@@ -855,14 +880,11 @@ footer {
         display: flex;
         flex-wrap: nowrap;
         justify-content: flex-start;
+        align-items: flex-start;
         .about-advisor-image {
-            
-            img {
-                width: 300px;
-                border: 5px solid black;
-                //border-radius: 50%;
-            }
-            //float: left;
+            min-width: 300px;
+            border: 5px solid black;
+            box-sizing: border-box;
         }
         .about-advisor-description {
             margin-left: 50px;

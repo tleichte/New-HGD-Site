@@ -1,8 +1,5 @@
 <?php 
 
-define( 'WP_DEBUG', true );
-
-
 function hgd_meta() { ?>
 
     <meta charset="utf-8">
@@ -16,6 +13,7 @@ function hgd_scripts() {
     if (is_page('Games')) {
         hgd_add_games_script();
     }
+    wp_enqueue_script('header-script', get_template_directory_uri().'/scripts/header.js', array('jquery'), 1.0, true);
     //wp_enqueue_script( 'script-name', get_template_directory_uri() . '/js/example.js', array(), '1.0.0', true );
 }
 add_action( 'wp_enqueue_scripts', 'hgd_scripts' );
@@ -73,3 +71,11 @@ function hgd_editor_styles() {
     add_editor_style("editor-styles.css");
 }
 add_action ('init', 'hgd_editor_styles');
+
+
+
+function hgd_mime_types($existing_mimes) {
+    $existing_mimes['svg'] = 'image/svg+xml';
+    return $existing_mimes;
+}
+add_filter('mime_types', 'hgd_mime_types');

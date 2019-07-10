@@ -1,15 +1,25 @@
 <?php 
-    global $post;
-    $post = get_post($_POST['game']);
-    setup_postdata( $post );
+    // global $post;
+    // $post = get_post($_POST['game']);
+
+    $args = array(
+        'name' => $_POST['game'],
+        'post_type' => "games_posts",
+        "numberposts" => 1
+    );
+
+    $posts = get_posts($args);
+    
+    if ($posts) :
+        global $post;
+        $post = $posts[0];
+  //  setup_postdata( $post );
+
+//if (get_post_type() == "games_posts"):
 ?>
 
-<p class="games-modal-title">
-    <?php echo get_the_title(); ?>
-</p>
-<p class="games-modal-year">
-    <?php echo get_the_terms(get_the_ID(), 'game_year')[0]->name; ?>
-</p>
+<p class="games-modal-title"><?php echo get_the_title(); ?></p>
+<p class="games-modal-year"><?php echo get_the_terms(get_the_ID(), 'game_year')[0]->name; ?></p>
 
 
 <?php 
@@ -101,8 +111,8 @@
         $descr = get_field("description");
         if (strlen(trim($descr)) > 0) {
 ?>
-            <span>Description</span>
-            <?php echo nl2br($descr); ?>
+            <div class="games-modal-description-text-header">Description</div>
+            <div class="games-modal-description-text-text"><?php echo nl2br($descr); ?></div>
 <?php 
         }
         $download_link = get_field("download_link");
@@ -118,3 +128,9 @@
 ?>
     </div>
 </div>
+
+<?php else: 
+    http_response_code(404);    
+?>
+
+<?php endif; ?>

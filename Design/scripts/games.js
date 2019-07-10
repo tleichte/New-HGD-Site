@@ -5,8 +5,21 @@
         var url = new URL(window.location.href);
         //var queryYear = url.searchParams.get("year");
         var queryGame = url.searchParams.get("game");
-        console.log("Query Game: "+queryGame);
+        
+        if (queryGame) {
+            showModal(queryGame, InitialGameCallback);
+        }
+        else {
+            //Get the first year's game list
+            var year = $(".games-year").first().attr("year");
+            $(".games-year[year='"+year+"']").trigger("click");
+        }
     });
+
+function InitialGameCallback() {
+    var year = $(".games-modal-year").html();
+    $(".games-year[year='"+year+"']").trigger("click");
+}
 
 
 var yearList = $(".games-year");
@@ -59,17 +72,17 @@ function GetGamesList(year) {
 
 function ResetGamesClick() {
     $(".games-game").on("click", function() {
-        showModal()
-        $("#games-modal-content").addClass("games-modal-content-loading");
-        $("#games-modal-content").html($("#loading").html());
-
-        GetGameModal($(this).attr("game"));
-        // currentGame = 
-        // setTimeout(ReplaceModalContent, 500);
+        var game = $(this).attr("game");
+        console.log("Game Clicked: "+game);
+        showModal(game);
     });
 }
 
-function GetGameModal(game) {
+function GetGameModal(game, successCallback, failCallback) {
+    
+    $("#games-modal-content").addClass("games-modal-content-loading");
+    $("#games-modal-content").html($("#loading").html());
+    
     //Send AJAX request
     $.ajax({
         url: games.ajaxurl,
@@ -85,22 +98,30 @@ function GetGameModal(game) {
                 ReplaceGalleryImage(this);
             });
             ReplaceGalleryImage($(".games-modal-gallery-image").first());
+
+            var url = new URL(window.location.href);
+            url.searchParams.set("game", game);
+            history.replaceState(history.state, "Game Page", url);
+
+            successCallback();
+        },
+        error: function(result) {
+            $("#games-modal-content").removeClass("games-modal-content-loading");
+            $("#games-modal-content").html("<p class='games-modal-title'>Sorry, we couldn't find that game!</p>");
+            //hideModal();
+            failCallback();
         }
     });
 }
 
 
-//Get the first year's game list
-GetGamesList($(".games-year-selected").first().attr("year"));
-
-
-function showModal() {
+function showModal(game, successCallback, failCallback) {
     $("#games-modal").fadeIn(300);
     $("body").addClass("modal-open");
     $("#games-modal").removeClass("games-modal-invisible");
     $("#games-modal").addClass("games-modal-visible");
 
-    console.log("Clicked on Game");
+    GetGameModal(game, successCallback, failCallback);
 }
 
 function hideModal() {
@@ -109,6 +130,10 @@ function hideModal() {
     $("#games-modal").removeClass("games-modal-visible");
     $("#games-modal").addClass("games-modal-invisible");
     setTimeout(function () {$("#games-modal-content").html("");}, 500);
+
+    var url = new URL(window.location.href);
+    url.searchParams.delete("game");
+    history.replaceState(history.state, "Game Page", url);
 }
 
 

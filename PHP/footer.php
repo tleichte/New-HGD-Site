@@ -34,7 +34,9 @@
 
     <div class="footer-mtu-background">
       <div class="footer-mtu main-content-wrapper">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/mtu-logo-g.png">
+        <a href="https://www.mtu.edu/" target="_blank">
+          <img src="<?php echo get_template_directory_uri(); ?>/images/mtu-logo-g.png">
+        </a>
         <div class="footer-mtu-eoe">
           Michigan Technological University is an Equal Opportunity Educational Institution/Equal Opportunity Employer, which includes providing equal opportunity for protected veterans and individuals with disabilities.
         </div>

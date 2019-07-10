@@ -21,7 +21,7 @@
 
   <h1>About Us</h1>
 
-  <img height=500 width=100% src="<?php echo $main_image['url']?>">
+  <img class="about-image" src="<?php echo $main_image['url']?>">
 
   <div class="about-paragraph">
     <?php echo $main_paragraph; ?>
@@ -96,9 +96,7 @@
   
 
   <div class="about-advisor">
-    <div class="about-advisor-image">
-      <img src="<?php echo $advisor_image['url']; ?>">
-    </div>
+    <img class="about-advisor-image" src="<?php echo $advisor_image['url']; ?>">
     <div class="about-advisor-description">
         <h3><?php echo $advisor_name; ?> - Faculty Advisor</h3>
         <div class="about-advisor-description-text">

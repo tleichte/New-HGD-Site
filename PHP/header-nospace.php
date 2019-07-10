@@ -14,6 +14,10 @@
                   <img class="header-logo" src="<?php echo get_template_directory_uri(); ?>/images/header-logo.svg">
               </a>
             </div>
+            <div class="header-mobile-hamburger">
+              <img src="<?php echo get_template_directory_uri(); ?>/images/hamburger.png">
+            </div>
+
             <nav class="header-nav">
               <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
             </nav>

@@ -2,7 +2,14 @@
 
 <div class="home-video-container">
     <video autoplay muted loop id="home-video">
-        <source src="<?php echo get_field("jumbotron_video")['url']; ?>" type="video/mp4">
+        <source src="<?php
+        if (wp_is_mobile()) {
+            echo get_field("jumbotron_video_mobile")['url'];
+        }
+        else {
+            echo get_field("jumbotron_video")['url']; 
+        }
+        ?>" type="video/mp4">
     </video>
 </div>
 
@@ -24,9 +31,8 @@
 
         <span id="mission" class="scroll-header-offset"></span>
 
-        <div class="home-mission-image">
-        <img height=500 width=500>
-        </div>
+        <img class="home-mission-image" src="<?php echo get_field('mission_image')['url']?>">
+
         <div class="home-mission-description">
             <h1><?php echo get_field("mission_title"); ?></h1>
             <div class="home-mission-description-mission">
@@ -41,9 +47,9 @@
         <div class="home-about-bg-image" style="background-image: url(<?php echo get_field("group_photo")['url'];?>)"></div>
 
         <div class="home-about-container main-content-wrapper">
-        <div class="home-about-image">
-            <img height=500 width=500>
-        </div>
+        
+        <img class="home-about-image" src="<?php echo get_field('about_image')['url']?>">
+        
         <div class="home-about-description">
             <h1><?php echo get_field("about_title"); ?></h1>
             <div class="home-about-description-text">
@@ -86,14 +92,14 @@
                 $name = get_the_title();
         ?>
 
-        <a href="#">
+        <!-- <a href="#"> -->
             <div class="home-alumni-post">
                 <img src="<?php echo $image['url'] ?>">
                 <div class="home-alumni-post-name">
                     <?php echo $name; ?>
                 </div>
             </div>
-        </a>
+        <!-- </a> -->
         
         <?php endwhile; ?>
         

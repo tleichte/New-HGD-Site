@@ -19,7 +19,7 @@
         while ($query->have_posts()) {
             $query->the_post();
 ?>
-            <div class="games-game" game="<?php echo get_the_ID(); ?>">
+            <div class="games-game" game="<?php global $post; echo $post->post_name; ?>">
                 <div class="games-game-image">
                     <img src="<?php echo get_field("cover_image")['url'];?>">
                 </div>

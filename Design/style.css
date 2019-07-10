@@ -562,6 +562,9 @@ header .header .header-logo-container .header-logo {
   height: 100%;
   width: auto;
 }
+header .header .header-mobile-hamburger {
+  display: none;
+}
 header .header .header-nav {
   color: white;
   font-weight: 300;
@@ -579,6 +582,9 @@ header .header .header-nav ul li a {
   transition: background-color 0.3s;
 }
 header .header .header-nav ul li a:hover {
+  background-color: #1e1e1e;
+}
+header .header .header-nav ul li.current-menu-item a {
   background-color: #1e1e1e;
 }
 
@@ -711,6 +717,7 @@ footer .footer-mtu-background .footer-mtu .footer-mtu-eoe {
   font-size: 30px;
   font-family: pt-sans-narrow, sans-serif;
   font-weight: 300;
+  text-align: center;
 }
 .home-video-jumbotron span a {
   text-decoration: underline;
@@ -734,6 +741,10 @@ footer .footer-mtu-background .footer-mtu .footer-mtu-eoe {
   display: flex;
   justify-content: flex-start;
   position: relative;
+}
+.home-mission .home-mission-image {
+  width: 500px;
+  height: 500px;
 }
 .home-mission .home-mission-description {
   margin-left: 50px;
@@ -786,7 +797,7 @@ footer .footer-mtu-background .footer-mtu .footer-mtu-eoe {
 }
 .home-method .home-method-image {
   width: 100%;
-  height: 600px;
+  max-height: 600px;
 }
 
 .home-alumni {
@@ -805,11 +816,11 @@ footer .footer-mtu-background .footer-mtu .footer-mtu-eoe {
   justify-content: space-around;
 }
 .home-alumni .home-alumni-container .home-alumni-post {
-  transition: transform 0.3s, box-shadow 0.3s;
   display: flex;
   align-items: center;
   box-sizing: border-box;
   width: 400px;
+  max-width: 100%;
   height: 215px;
   margin: 0 15px;
   margin-bottom: 30px;
@@ -819,10 +830,6 @@ footer .footer-mtu-background .footer-mtu .footer-mtu-eoe {
   border-radius: 150px;
   position: relative;
   background-color: black;
-}
-.home-alumni .home-alumni-container .home-alumni-post:hover {
-  transform: scale(1.05);
-  box-shadow: 7px 7px 7px #969696;
 }
 .home-alumni .home-alumni-container .home-alumni-post img {
   width: 100%;
@@ -951,6 +958,8 @@ footer .footer-mtu-background .footer-mtu .footer-mtu-eoe {
 }
 #games-modal .games-modal-container {
   overflow: auto;
+  display: flex;
+  justify-content: center;
 }
 #games-modal .games-modal-container .games-modal-inner {
   position: relative;
@@ -1012,6 +1021,7 @@ footer .footer-mtu-background .footer-mtu .footer-mtu-eoe {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 360px;
 }
 #games-modal .games-modal-container .games-modal-inner .games-modal-gallery-display .games-modal-gallery-display-image img {
   max-height: 100%;
@@ -1032,7 +1042,6 @@ footer .footer-mtu-background .footer-mtu .footer-mtu-eoe {
 }
 #games-modal .games-modal-container .games-modal-inner .games-modal-gallery {
   margin-top: 15px;
-  margin-bottom: 30px;
   overflow-x: auto;
   display: flex;
   flex-wrap: nowrap;
@@ -1088,6 +1097,8 @@ footer .footer-mtu-background .footer-mtu .footer-mtu-eoe {
 #games-modal .games-modal-container .games-modal-inner .games-modal-description {
   display: flex;
   flex-direction: row-reverse;
+  align-items: flex-start;
+  margin-top: 30px;
 }
 #games-modal .games-modal-container .games-modal-inner .games-modal-description .games-modal-developers {
   background-color: #e6e6e6;
@@ -1117,14 +1128,14 @@ footer .footer-mtu-background .footer-mtu .footer-mtu-eoe {
   flex-grow: 1;
   font-size: 20px;
 }
-#games-modal .games-modal-container .games-modal-inner .games-modal-description .games-modal-description-text span {
+#games-modal .games-modal-container .games-modal-inner .games-modal-description .games-modal-description-text .games-modal-description-text-header {
   display: block;
   font-size: 25px;
   font-weight: bold;
   margin-bottom: 10px;
 }
-#games-modal .games-modal-container .games-modal-inner .games-modal-description .games-modal-description-text button {
-  margin-top: 30px;
+#games-modal .games-modal-container .games-modal-inner .games-modal-description .games-modal-description-text .games-modal-description-text-text {
+  margin-bottom: 30px;
 }
 #games-modal .games-modal-container .games-modal-inner .games-modal-content-loading {
   display: flex;
@@ -1135,6 +1146,10 @@ footer .footer-mtu-background .footer-mtu .footer-mtu-eoe {
   max-width: 100px;
 }
 
+.about-container .about-image {
+  max-height: 500px;
+  width: 100%;
+}
 .about-container .about-paragraph {
   display: flex;
   flex-direction: column;
@@ -1145,6 +1160,7 @@ footer .footer-mtu-background .footer-mtu .footer-mtu-eoe {
 .about-container .about-paragraph p {
   text-align: justify;
   width: 800px;
+  max-width: 100%;
   margin-top: 30px;
   line-height: 1.05;
 }
@@ -1192,10 +1208,12 @@ footer .footer-mtu-background .footer-mtu .footer-mtu-eoe {
   display: flex;
   flex-wrap: nowrap;
   justify-content: flex-start;
+  align-items: flex-start;
 }
-.about-container .about-advisor .about-advisor-image img {
-  width: 300px;
+.about-container .about-advisor .about-advisor-image {
+  min-width: 300px;
   border: 5px solid black;
+  box-sizing: border-box;
 }
 .about-container .about-advisor .about-advisor-description {
   margin-left: 50px;
@@ -1226,6 +1244,239 @@ footer .footer-mtu-background .footer-mtu .footer-mtu-eoe {
 }
 
 /* Small/Default Styles */
+@media screen and (max-width: 771px) {
+  .scroll-header-offset {
+    top: -75px;
+  }
+
+  h1 {
+    font-size: 50px;
+  }
+
+  h2 {
+    font-size: 42.5px;
+  }
+
+  h3 {
+    font-size: 36.5px;
+  }
+
+  h4 {
+    font-size: 30px;
+  }
+
+  h5 {
+    font-size: 25px;
+  }
+
+  h6 {
+    font-size: 20px;
+  }
+
+  header {
+    height: 75px;
+  }
+  header .header {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  header .header .header-logo-container {
+    padding-left: 0px;
+  }
+  header .header .header-mobile-hamburger {
+    display: flex;
+    align-items: center;
+  }
+  header .header .header-mobile-hamburger img {
+    height: 30px;
+    width: 30px;
+  }
+  header .header .header-nav {
+    height: auto;
+    position: fixed;
+    right: 0;
+    top: 75px;
+    align-items: initial;
+    flex-direction: column;
+    border-top: 1px solid white;
+    background-color: black;
+    transform: translateX(100%);
+    transition: transform 0.3s;
+  }
+  header .header .header-nav.header-nav-mobile-visible {
+    transform: translateX(0%);
+  }
+  header .header .header-nav ul {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0;
+    padding-left: 0;
+  }
+  header .header .header-nav ul li {
+    text-align: center;
+  }
+  header .header .header-nav ul li a {
+    display: block;
+    padding: 15px 40px;
+  }
+
+  .header-offset {
+    height: 75px;
+  }
+
+  footer .footer-nav {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  footer .footer-nav ul {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+  footer .footer-nav ul li {
+    margin: 15px 0;
+    text-align: center;
+    font-size: 20px;
+  }
+  footer .footer-social img {
+    height: 50px;
+    width: 50px;
+    margin: 0 15px;
+  }
+  footer .footer-copyright {
+    font-size: 14px;
+  }
+  footer .footer-mtu-background .footer-mtu {
+    flex-direction: column;
+  }
+  footer .footer-mtu-background .footer-mtu .footer-mtu-eoe {
+    border: none;
+    height: auto;
+    margin-left: 0;
+    padding-left: 0;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: solid 1px white;
+    text-align: center;
+  }
+
+  .home-video-jumbotron span {
+    padding: 0 30px;
+    font-size: 20px;
+  }
+
+  .home-mission {
+    padding-top: 80px;
+    padding-bottom: 30px;
+    flex-direction: column;
+    text-align: center;
+  }
+  .home-mission .home-mission-image {
+    width: auto;
+    height: auto;
+    margin-bottom: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .home-mission .home-mission-description {
+    margin-left: 0;
+  }
+  .home-mission .home-mission-description .home-mission-description-mission {
+    font-size: 30px;
+    padding: 0 10px;
+  }
+
+  .home-about .home-about-bg-image {
+    height: 200px;
+    background-attachment: initial;
+  }
+  .home-about .home-about-container {
+    padding-top: 80px;
+    padding-bottom: 30px;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 80px;
+  }
+  .home-about .home-about-container .home-about-image {
+    width: auto;
+    height: auto;
+    margin-bottom: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .home-about .home-about-container .home-about-description {
+    margin-right: 0;
+  }
+  .home-about .home-about-container .home-about-description .home-about-description-text {
+    font-size: 30px;
+    padding: 0 10px;
+  }
+
+  .home-method .home-method-description {
+    font-size: 30px;
+    padding: 0 10px;
+  }
+
+  .home-alumni {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .about-container .about-paragraph p {
+    font-size: 20px;
+  }
+  .about-container .about-advisor {
+    flex-direction: column;
+  }
+  .about-container .about-advisor .about-advisor-image {
+    margin-bottom: 25px;
+    width: 100%;
+    height: auto;
+  }
+  .about-container .about-advisor .about-advisor-description {
+    margin-left: 0;
+  }
+  .about-container .about-advisor .about-advisor-description .about-advisor-description-text {
+    font-size: 30px;
+    padding: 0 10px;
+  }
+
+  .games-outer-container {
+    flex-direction: column;
+  }
+  .games-outer-container .games-years {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+  .games-outer-container #games-container {
+    margin-left: 0;
+  }
+  .games-outer-container #games-container .games-game .games-game-image {
+    padding-bottom: 33%;
+    height: auto;
+  }
+  .games-outer-container #games-container .games-game .games-game-image img {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #games-modal .games-modal-container .games-modal-inner .games-modal-description {
+    flex-direction: column;
+    align-items: center;
+  }
+  #games-modal .games-modal-container .games-modal-inner .games-modal-description .games-modal-developers {
+    max-width: 100%;
+    margin-left: 0;
+    margin-bottom: 30px;
+  }
+  #games-modal .games-modal-container .games-modal-inner .games-modal-description .games-modal-developers .games-modal-developer {
+    white-space: inherit;
+  }
+}
 .editor-styled {
   /* =WordPress Core
   -------------------------------------------------------------- */

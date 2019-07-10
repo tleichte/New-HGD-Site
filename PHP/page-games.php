@@ -25,9 +25,9 @@
              foreach($terms as $term) {
                  $slg = $term->slug;
                  $classes = "games-year";
-                 if ($i == 0) {
-                     $classes .= " games-year-selected";
-                 }
+                //  if ($i == 0) {
+                //      $classes .= " games-year-selected";
+                //  }
                  $i++;
                  ?>
 
