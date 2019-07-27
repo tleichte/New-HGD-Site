@@ -258,6 +258,9 @@ footer {
 
     background: radial-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7));
 
+    box-sizing: border-box;
+    padding-bottom: 150px;
+
     //pointer-events: none;
     .home-video-jumbotron-logo {
         box-sizing: content-box;
@@ -393,15 +396,6 @@ footer {
         justify-content: space-around;
 
         .home-alumni-post {
-
-            // transition: transform 0.3s, box-shadow 0.3s;
-
-            // &:hover {
-            //     transform: scale(1.05);
-            //     box-shadow: 7px 7px 7px rgb(150,150,150);
-            // }
-
-
             display: flex;
             align-items: center;
 

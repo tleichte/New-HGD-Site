@@ -701,6 +701,8 @@ footer .footer-mtu-background .footer-mtu .footer-mtu-eoe {
   align-items: center;
   color: white;
   background: radial-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7));
+  box-sizing: border-box;
+  padding-bottom: 150px;
   z-index: 0;
 }
 .home-video-jumbotron .home-video-jumbotron-logo {
