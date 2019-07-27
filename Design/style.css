@@ -687,6 +687,7 @@ footer .footer-mtu-background .footer-mtu .footer-mtu-eoe {
   width: 100%;
   z-index: -999;
   box-sizing: content-box;
+  background-color: #141414;
 }
 .home-video-container #home-video {
   min-height: 100%;
@@ -1361,6 +1362,11 @@ footer .footer-mtu-background .footer-mtu .footer-mtu-eoe {
     padding-top: 15px;
     border-top: solid 1px white;
     text-align: center;
+  }
+
+  .home-video-container #home-video {
+    min-height: auto;
+    height: 100%;
   }
 
   .home-video-jumbotron span {
