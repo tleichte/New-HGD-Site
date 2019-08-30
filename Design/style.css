@@ -829,7 +829,6 @@ footer .footer-mtu-background .footer-mtu .footer-mtu-eoe {
   margin-bottom: 30px;
   overflow: hidden;
   border: solid 5px black;
-  box-shadow: 3px 3px 3px #969696;
   border-radius: 150px;
   position: relative;
   background-color: black;
@@ -1364,9 +1363,9 @@ footer .footer-mtu-background .footer-mtu .footer-mtu-eoe {
     text-align: center;
   }
 
-  .home-video-container #home-video {
-    min-height: auto;
-    height: 100%;
+  .home-video-container {
+    background-size: cover;
+    background-position: 50% 50%;
   }
 
   .home-video-jumbotron span {

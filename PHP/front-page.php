@@ -1,17 +1,24 @@
 <?php get_header("nospace"); ?>
 
-<div class="home-video-container">
-    <video autoplay muted loop id="home-video">
-        <source src="<?php
-        if (wp_is_mobile()) {
-            echo get_field("jumbotron_video_mobile")['url'];
-        }
-        else {
-            echo get_field("jumbotron_video")['url']; 
-        }
-        ?>" type="video/mp4">
-    </video>
-</div>
+<?php 
+    if (wp_is_mobile()) {
+?>
+    <div 
+        class="home-video-container"
+        style="background-image: url('<?php echo get_field("jumbotron_mobile_bg")['url'] ?>')">
+    </div>
+<?php 
+    }
+    else {
+?>
+    <div class="home-video-container">
+        <video autoplay muted loop id="home-video">
+            <source src="<?php echo get_field("jumbotron_video")['url']; ?>" type="video/mp4">
+        </video>
+    </div>
+<?php 
+    }
+?>
 
 <div class="home-video-jumbotron">
     <div class="home-video-jumbotron-logo">
