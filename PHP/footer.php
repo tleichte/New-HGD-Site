@@ -14,7 +14,7 @@
     </div>
 
     <div class="footer-social">
-      <a href="https://www.facebook.com/groups/huskygames/" target="_blank">
+      <a href="https://www.facebook.com/huskygamedev/" target="_blank">
         <img src="<?php echo get_template_directory_uri(); ?>/images/facebook.svg">
       </a>
       <a href="https://www.linkedin.com/groups/6535409/" target="_blank">
